@@ -1,53 +1,67 @@
 // A função animateCounter permanece a mesma.
+function animateCounter(element, end, suffix) {
+    // 'element' aqui é o h3.contador-numero que você passou
 
+    let current = 0;
+    const duration = 2000; // 2 segundos
+    const stepTime = 20;   // Atualiza a cada 20ms
+    const steps = duration / stepTime;
+    const increment = end / steps;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            clearInterval(timer);
+            element.textContent = end + suffix; // Usa 'element.textContent'
+        } else {
+            element.textContent = Math.ceil(current) + suffix; // Usa 'element.textContent'
+        }
+    }, stepTime);
+}
 // ---------------------------------------------------------------------
 
 // Cria uma instância do Intersection Observer
 const observer = new IntersectionObserver((entries) => {
-    // Itera sobre todos os elementos que o observer está monitorando
     entries.forEach(entry => {
-        const el = entry.target; // O elemento DOM (.contador-item)
-        
-        // Verifica se o elemento está visível na tela (entrando)
-        if (entry.isIntersecting) {
-            // Evita reiniciar a animação se ela já estiver rodando ou concluída
-            if (el.getAttribute('data-animated') === 'false') {
-                const end = +el.getAttribute('data-max');
-                const suffix = el.getAttribute('data-suffix') || '';
-                
-                // Inicia a animação a partir do zero
-                animateCounter(el, end, suffix);
-                
-                // Marca o elemento como animado para esta "sessão" de visibilidade
-                el.setAttribute('data-animated', 'true');
-            }
-        } else {
-            // O elemento não está mais visível (saindo da tela)
-            // Reseta o texto para o valor inicial
+    const el = entry.target;
+    const numberEl = el.querySelector('.contador-numero'); // <-- SELECIONA PELA CLASSE
+
+    if (!numberEl) return; // Se não encontrar o número, não faz nada
+
+    if (entry.isIntersecting) {
+        if (el.getAttribute('data-animated') === 'false') {
+            const end = +el.getAttribute('data-max');
             const suffix = el.getAttribute('data-suffix') || '';
-            if (el.firstChild) {
-                el.firstChild.textContent = '0' + suffix;
-            }
-            // Reseta a marcação para que a animação possa rodar novamente na próxima vez
-            el.setAttribute('data-animated', 'false');
+            
+            // IMPORTANTE: Passe o 'numberEl' para sua função de animar
+            animateCounter(numberEl, end, suffix); // <-- PASSA O ELEMENTO CORRETO
+            
+            el.setAttribute('data-animated', 'true');
         }
-    });
+    } else {
+        const suffix = el.getAttribute('data-suffix') || '';
+        numberEl.textContent = '0' + suffix; // <-- ATUALIZA O ELEMENTO CORRETO
+        el.setAttribute('data-animated', 'false');
+    }
+});
 }, { 
     // Opções do Observer:
     // A animação dispara quando 50% do elemento estiver visível
-    threshold: 0.5 
+    threshold: 0.1 
 });
 
 // ---------------------------------------------------------------------
 
 // Seleciona todos os elementos com a classe '.contador-item' e inicia a observação
+// NO FINAL DO ARQUIVO, ONDE VOCÊ INICIA A OBSERVAÇÃO
 document.querySelectorAll('.contador-item').forEach(el => {
-    // Define o texto e o estado inicial antes da animação começar
+    const numberEl = el.querySelector('.contador-numero'); // <-- SELECIONA PELA CLASSE
+
+    if (!numberEl) return;
+
     const suffix = el.getAttribute('data-suffix') || '';
-    if(el.firstChild){
-       el.firstChild.textContent = '0' + suffix;
-    }
-    // Adiciona um atributo para controlar o estado da animação
+    numberEl.textContent = '0' + suffix; // <-- ATUALIZA O ELEMENTO CORRETO
+    
     el.setAttribute('data-animated', 'false');
     observer.observe(el);
 });

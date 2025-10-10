@@ -8,11 +8,18 @@
  background-color: rgba(83, 83, 83, 0.719);
 }
 
+.img-quality{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 20px;
+  column-gap: 20px;
+
+}
 
 
-.img-quality img {
-    width: 100%;
-    
+
+.img-quality img { 
+    width: 250px;
   border-radius: 15px 0 15px 0;
   
 }
@@ -64,6 +71,18 @@ gap: 30px;
  background-color: rgba(83, 83, 83, 0.719);
 }
 
+.img-quality{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  
+
+}
+
+.img-quality img{
+  width: 350px;
+
+}
+
 .quality-text {
     display: flex;
 flex-direction: column;
@@ -71,12 +90,24 @@ gap: 50px;
 width: 100%;
 }
 
-#contador {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+   #contador {
+        display: flex;
+        flex-direction: row; /* ✅ MUDEI: Itens agora ficam em coluna */
+        align-items: start;    /* ✅ MUDEI: Centraliza os itens na coluna */
+        gap: 40px;              /* ✅ ADICIONEI: Espaçamento vertical entre os itens */
+        
+    }
+     .contador-item {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--color-primary-1);
+      text-align: start;
+    }
 
+    .contador-item span {
+      display: block;
+      font-size: 18px;
+      color: #ccc;
     }
 
 
