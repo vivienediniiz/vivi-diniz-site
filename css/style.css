@@ -51,16 +51,17 @@
   --fonte-mono: "Roboto Mono", monospace;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html, body {
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* A MÁGICA ACONTECE AQUI! */
 }
 
 html {
