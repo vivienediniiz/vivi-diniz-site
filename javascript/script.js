@@ -2,7 +2,7 @@ $(document).ready(function() {
     // --- 1. Lógica do Menu Mobile ---
     $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('active');
-        $(this).find('i').toggleClass('fa-x'); // 'this' é mais eficiente que buscar o ID de novo
+        $(this).find('i').toggleClass('fa-bars fa-x'); 
     });
 
     // --- 2. Scroll Suave ao Clicar nos Links de Navegação ---

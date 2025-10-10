@@ -11,6 +11,12 @@ header {
     z-index: 3;
 }
 
+#mobile_btn i {
+    color: var(--color-primary-1); /* Exemplo: cinza claro. Mude para a cor que desejar! */
+    font-size: 1.5rem; /* Ajuste o tamanho se necessário */
+    transition: color 0.3s ease; /* Adiciona uma transição suave na cor */
+}
+
 #navbar {
   width: 100%;
   display: flex;
@@ -26,7 +32,7 @@ header {
 
 #nav_logo {
   font-size: 24px;
-  color: var(--color-primary-5);
+  color: var(--color-primary-1);
 }
 
 #nav_list {
@@ -39,6 +45,7 @@ header {
 }
 
 .nav-item a {
+  font-size: 1rem;
     text-decoration: none;
     color: var(--color-primary-4); /* Cor padrão */
     font-weight: 600;
@@ -83,6 +90,11 @@ header {
 }
 
 @media screen and (max-width: 1170px) {
+
+.nav-item a {
+  font-size: 1.6rem;
+}
+
   #nav_list,
   #navbar .btn-default {
     display: none;
@@ -97,17 +109,45 @@ header {
     cursor: pointer;
   }
 
-  #mobile_menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#mobile_menu {
+    /* --- Adicionado: Transforma em Flex Container --- */
+    display: flex; 
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center;    /* Centraliza na horizontal */
+    justify-content: center;/* Centraliza na vertical */
+    gap: 50px;
+    
+    /* Posicionamento */
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    /* Estilização Visual */
+    background-color: #353535;
+    padding: 20px;
+    
+    /* Animação (mantida, mas com display:flex) */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile_menu.active {
+    /* Exibe o menu com animação */
+    opacity: 1;
+    pointer-events: auto; /* Permite cliques quando visível */
+    transform: translateY(0);
+}
 
   #mobile_nav_list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 20px;
     margin: 12px 0px;
+
   }
 
   #mobile_nav_list .nav-item {
