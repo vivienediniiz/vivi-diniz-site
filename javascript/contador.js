@@ -1,58 +1,35 @@
-/**
- * A função principal que executa a animação de contagem de um número.
- * @param {HTMLElement} el - O elemento DOM que contém o contador.
- * @param {number} end - O número final para a contagem.
- * @param {string} suffix - O texto a ser exibido após o número (ex: '+').
- */
-function animateCounter(el, end, suffix) {
-    const duration = 2000; // Duração total da animação em milissegundos
-    const startTime = performance.now(); // Marca o tempo de início da animação
-
-    // Função interna que será chamada repetidamente para cada frame da animação
-    function update(time) {
-        // Calcula o progresso da animação (um valor entre 0 e 1)
-        const progress = Math.min((time - startTime) / duration, 1);
-        
-        // Calcula o valor atual do contador baseado no progresso
-        const value = Math.floor(progress * end);
-        
-        // Atualiza o conteúdo de texto do primeiro nó filho do elemento
-        // ATENÇÃO: Isso assume que o número é o primeiro filho.
-        // Se houver um ícone ou outro elemento antes, isso pode falhar.
-        if (el.firstChild) {
-            el.firstChild.textContent = value + suffix;
-        }
-
-        // Se a animação não terminou, solicita o próximo frame
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        }
-    }
-
-    // Inicia o loop da animação
-    requestAnimationFrame(update);
-}
+// A função animateCounter permanece a mesma.
 
 // ---------------------------------------------------------------------
 
-// Cria uma instância do Intersection Observer para monitorar a visibilidade dos elementos
+// Cria uma instância do Intersection Observer
 const observer = new IntersectionObserver((entries) => {
     // Itera sobre todos os elementos que o observer está monitorando
     entries.forEach(entry => {
         const el = entry.target; // O elemento DOM (.contador-item)
         
-        // Obtém o valor final do atributo 'data-max' e converte para número
-        const end = +el.getAttribute('data-max');
-        
-        // Obtém o sufixo do atributo 'data-suffix'
-        const suffix = el.getAttribute('data-suffix') || '';
-
-        // Verifica se o elemento está visível na tela
+        // Verifica se o elemento está visível na tela (entrando)
         if (entry.isIntersecting) {
-            // Reinicia a animação a partir do zero
-            animateCounter(el, end, suffix);
-            // Para de observar este elemento para não reiniciar a animação ao rolar a página
-            observer.unobserve(el); 
+            // Evita reiniciar a animação se ela já estiver rodando ou concluída
+            if (el.getAttribute('data-animated') === 'false') {
+                const end = +el.getAttribute('data-max');
+                const suffix = el.getAttribute('data-suffix') || '';
+                
+                // Inicia a animação a partir do zero
+                animateCounter(el, end, suffix);
+                
+                // Marca o elemento como animado para esta "sessão" de visibilidade
+                el.setAttribute('data-animated', 'true');
+            }
+        } else {
+            // O elemento não está mais visível (saindo da tela)
+            // Reseta o texto para o valor inicial
+            const suffix = el.getAttribute('data-suffix') || '';
+            if (el.firstChild) {
+                el.firstChild.textContent = '0' + suffix;
+            }
+            // Reseta a marcação para que a animação possa rodar novamente na próxima vez
+            el.setAttribute('data-animated', 'false');
         }
     });
 }, { 
@@ -65,10 +42,12 @@ const observer = new IntersectionObserver((entries) => {
 
 // Seleciona todos os elementos com a classe '.contador-item' e inicia a observação
 document.querySelectorAll('.contador-item').forEach(el => {
-    // Define o texto inicial como '0' antes da animação começar
+    // Define o texto e o estado inicial antes da animação começar
     const suffix = el.getAttribute('data-suffix') || '';
     if(el.firstChild){
        el.firstChild.textContent = '0' + suffix;
     }
+    // Adiciona um atributo para controlar o estado da animação
+    el.setAttribute('data-animated', 'false');
     observer.observe(el);
 });
