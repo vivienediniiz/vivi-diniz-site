@@ -103,10 +103,11 @@ span{
 
 @media screen and (max-width: 768px) {
    .cards{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 45px;
-        place-items: center; /* Atalho para alinhar horizontal e verticalmente */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
 
 
 }

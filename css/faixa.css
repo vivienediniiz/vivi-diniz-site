@@ -33,6 +33,7 @@
  
 
     .faixa-1 {
+        display: none;
         /* 1. Muda a direção para empilhar os itens verticalmente */
         flex-direction: row;
         
