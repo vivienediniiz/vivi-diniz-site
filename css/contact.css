@@ -152,7 +152,24 @@ select {
 /* --- Media Queries para Responsividade --- */
 
 /* Em telas menores, os campos ficam em coluna única */
-@media (max-width: 550px) { /* Ajustando o breakpoint para a nova largura */
+@media (max-width: 768px) { /* Ajustando o breakpoint para a nova largura */
+    
+    #contact{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 40px;
+    font-family: var(--fonte-principal);
+    
+}
+
+#contact .description{
+    width: 100%;
+    font-size: 1rem;
+    text-align: start;
+
+}
     .form-row {
         flex-direction: column;
         gap: 0;

@@ -102,14 +102,15 @@ main {
 @media screen and (max-width: 480px) {
   /* Adicione seus estilos para telas menores aqui, se necessário */
 #banner {
-  margin-top: 60px;
   padding: 0;
 }
 
 .function {
   font-family: var(--font-roboto);
-  font-size: 37px;
+  font-size: 39px;
 }
+
+
 
 }
 

@@ -220,6 +220,7 @@
 @media (max-width: 600px) {
     .footer-top-content {
         flex-direction: column;
+        gap: 40px;
         align-items: flex-start;
     }
 

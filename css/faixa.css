@@ -30,9 +30,7 @@
 
 @media screen and (max-width: 768px) {
 
-  .list-tec{
-    white-space: nowrap;
-  }
+ 
 
     .faixa-1 {
         /* 1. Muda a direção para empilhar os itens verticalmente */
