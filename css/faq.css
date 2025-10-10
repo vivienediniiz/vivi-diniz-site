@@ -1,0 +1,105 @@
+
+/* --- Seção Principal do FAQ --- */
+.faq-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+    background-color: rgba(83, 83, 83, 0.719);
+
+  
+  
+}
+
+/* --- Cabeçalho do FAQ --- */
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.faq p {
+  padding: 0;
+}
+
+.faq .title {
+  padding: 0;
+}
+
+/* --- Container e Itens do Acordeão --- */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.faq-item {
+  border: 1px solid var(--color-faq-border);
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo da Pergunta (Summary) */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ffffff9a;
+  cursor: pointer;
+  list-style: none; /* Remove a seta padrão do details */
+  /* Remove a seta padrão do details no Firefox */
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+/* Ícone de Toggle (+/-) */
+.faq-icon {
+  font-size: 1.5em;
+  line-height: 1;
+  transition: transform 0.3s;
+  color: var(--color-primary-1);
+}
+
+/* Estilo da Resposta (Conteúdo) */
+.faq-answer {
+  padding: 0 25px 20px;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-answer p,
+.faq-answer ul {
+  margin-bottom: 10px;
+}
+
+.faq-answer ul {
+  padding-left: 20px;
+}
+
+/* Efeito de Rotação do Ícone ao Abrir */
+.faq-item[open] .faq-icon {
+  content: "−"; /* Opcional: para browsers que suportam "content" no ícone */
+  transform: rotate(45deg); /* Gira o '+' para parecer um 'x' ou um '-' */
+}
+
+/* Opcional: Estilo para a Pergunta quando aberta */
+.faq-item[open] .faq-question {
+  background-color: var(--color-faq-hover);
+  border-bottom: 1px solid var(--color-faq-border);
+}
+

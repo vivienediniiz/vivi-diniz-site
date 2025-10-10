@@ -1,0 +1,47 @@
+
+#faixa{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    
+    
+}
+
+.faixa-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+     /* Fundo semi-transparente */
+  background: rgba(255, 255, 255, 0.25); /* 1. Fundo semi-transparente */
+            backdrop-filter: blur(10px); /* 2. O desfoque do fundo! */
+            -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+           
+            border: 1px solid rgba(255, 255, 255, 0.18); /* 4. Borda sutil */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* 5. Sombra para dar profundidade */
+  transform: rotate(0deg);
+  color: rgba(233, 143, 218, 0.575);
+
+}
+
+.faixa-1 img{
+  width: 1%;
+}
+
+.faixa-2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     /* Fundo semi-transparente */
+  background: rgba(255, 255, 255, 0.25); /* 1. Fundo semi-transparente */
+            backdrop-filter: blur(10px); /* 2. O desfoque do fundo! */
+            -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
+            
+            border: 1px solid rgba(255, 255, 255, 0.18); /* 4. Borda sutil */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* 5. Sombra para dar profundidade */
+  transform: rotate(2deg);
+  color: rgba(129, 129, 129, 0.575);
+    
+}

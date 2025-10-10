@@ -1,0 +1,122 @@
+header {
+    padding: 3px 8%;
+    position: sticky;
+    top: 0;
+    /* Fundo semi-transparente (Glassmorphism) */
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    z-index: 3;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+#navbar img{
+ 
+
+}
+
+#nav_logo {
+  font-size: 24px;
+  color: var(--color-primary-5);
+}
+
+#nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 150px;
+  gap: 80px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--color-primary-4); /* Cor padrão */
+    font-weight: 600;
+    position: relative; /* Necessário para a animação do sublinhado */
+    
+    /* ESSENCIAL: Adiciona a transição para animar as mudanças de estado */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Adiciona o sublinhado com um pseudo-elemento ::after */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    width: 0%; /* Começa com largura zero (invisível) */
+    height: 2px;
+    bottom: -5px; /* Posição abaixo do link */
+    left: 0;
+    background-color: var(--color-primary-1); /* Cor Rosa/Lilás (Ajuste o código da sua paleta) */
+    transition: width 0.3s ease-in-out; /* Anima a largura do sublinhado */
+}
+
+.nav-item.active a {
+  color: var(--color-primary-1);
+  
+}
+
+/* Opcional: Efeito hover */
+.nav-item a:hover {
+    color: var(--color-primary-1); 
+}
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+
+#mobile_btn {
+  display: none;
+}
+
+#mobile_menu {
+  display: none;
+}
+
+@media screen and (max-width: 1170px) {
+  #nav_list,
+  #navbar .btn-default {
+    display: none;
+  }
+
+  #mobile_btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  #mobile_menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+  }
+
+  #mobile_nav_list .nav-item {
+    list-style: none;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  
+}

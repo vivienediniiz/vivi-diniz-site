@@ -1,0 +1,16 @@
+
+#tecnologia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(238, 238, 238);
+}
+
+.tec{
+    color: var(--color-primary-4);
+    padding: 15px;
+    background-color: var(--color-primary-2);
+    border-radius: 15px;
+}

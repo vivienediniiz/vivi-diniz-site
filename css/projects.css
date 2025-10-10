@@ -1,0 +1,90 @@
+
+
+#texto-portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-1);
+}
+
+#projects .title {
+  padding: 0 0 55px 0;
+}
+
+#projects p {
+  padding: 10px;
+  color: #878686;
+}
+
+#portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.img-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-section img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.projeto-01 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   
+  padding: 20px;
+  border-radius: 5px;
+  /* 1. O segredo da suavidade: a transição */
+  /* Anima a propriedade 'transform' durante 0.3 segundos */
+  transition: transform 0.3s ease-in-out;
+}
+
+.projeto-01:hover {
+  cursor: pointer;
+  /* Aumenta o tamanho do elemento em 5% */
+  transform: scale(1.05);
+  background-color: #d6d6d648;
+  border: solid 2px;
+  border-color: var(--color-primary-1);
+   /* Deslocamento X | Deslocamento Y | Raio de Desfoque (Blur) | Cor */
+    box-shadow: 0px 4px 20px#f3e0f2;
+}
+#name-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 0 0 9px;
+}
+
+#buttom-portfolio{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #878686;
+  padding: 10px;
+  border-radius: 20px;
+  color: var(--color-primary-1);
+  
+}
+
+

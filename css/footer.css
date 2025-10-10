@@ -1,0 +1,498 @@
+
+
+/* --- Estilo Geral do Footer --- */
+.main-footer {
+    font-family: var(--fonte-principal); /* Use a sua fonte */
+    background-color: rgb(214, 214, 214);
+    
+}
+
+.footer-main-grid,
+.footer-top-content,
+.footer-bottom-bar {
+    
+    margin: 0 auto;
+    padding: 28px 8%;
+}
+
+/* --- Conteúdo Superior (Let's Connect there) --- */
+.footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #E0E0E0; /* Linha sutil de separação */
+    padding-bottom: 20px;
+}
+
+.footer-top-content .title {
+   padding: 0;
+   font-size: 1.6rem;
+    
+}
+
+
+
+/* --- Grid Principal do Footer --- */
+.footer-main-grid {
+      display: flex;
+    flex-wrap: wrap; 
+    
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 30px; /* Espaçamento entre as colunas */
+    
+}
+
+.footer-column {
+    /* Ponto de partida para a distribuição: 20% do espaço disponível */
+     
+    min-width: 200px;
+}
+
+/* --- Tamanhos Específicos das 3 Colunas --- */
+
+/* Coluna 1: MAIOR (ex: 40% da largura total) */
+.footer-info {
+    flex: 1 1 33%; 
+    
+}
+
+/* Colunas 2 e 3: PADRÃO (ex: 28% da largura total) */
+.footer-nav {
+    flex: 1 1 28%; 
+    
+}
+
+.footer-contact {
+    flex: 1 1 33%;
+    
+}
+
+/* --- Estilo dos Títulos das Colunas --- */
+
+/* --- Coluna 1: Info e Social --- */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+    
+    
+}
+
+.footer-logo img{
+  width: 30px;
+}
+
+.footer-logo .logo-text{
+  font-weight: 500;
+  font-style: normal;
+  
+}
+
+.footer-info p {
+   width: 70%;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-info p span{
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+
+
+.social-links a {
+
+    color: var(--color-primary-1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--color-primary-1);
+    color: white;
+}
+
+/* --- Colunas de Links e Contato --- */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1rem;
+}
+
+.footer-nav li {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    color: var(--color-primary-5);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--color-primary-1);
+}
+
+.footer-contact .title {
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.footer-nav .title{
+   font-size: 1.2rem;
+    padding: 0;
+}
+
+.footer-contact a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+.footer-contact strong {
+    font-weight: 600;
+}
+
+
+
+/* --- Barra Inferior (Copyright e Políticas) --- */
+.footer-bottom-bar {
+    background-image:linear-gradient(90deg, #f3e0f2 0%, #f1a0d0 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.policy-links span{
+  font-style: normal;
+  color: #fff;
+}
+
+.policy-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+.policy-links a:hover {
+    color: var(--color-primary-1);
+}
+
+.policy-links span {
+    margin: 0 5px;
+}
+
+/* --- Responsividade (Ajustes para telas menores) --- */
+@media (max-width: 900px) {
+    .footer-main-grid {
+        justify-content: flex-start; /* Alinha ao começo */
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 45%; /* Duas colunas em telas médias */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-title {
+        margin-bottom: 15px;
+    }
+    
+    .footer-main-grid {
+        flex-direction: column; /* Colunas empilhadas em telas pequenas */
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 10px;
+    }
+
+
+/* --- Estilo Geral do Footer --- */
+.main-footer {
+    font-family: var(--fonte-principal); /* Use a sua fonte */
+     background-image: linear-gradient(90deg,  #f3e0f2 0%);
+    
+}
+
+.footer-main-grid,
+.footer-top-content,
+.footer-bottom-bar {
+    
+    margin: 0 auto;
+    padding: 28px 8%;
+}
+
+/* --- Conteúdo Superior (Let's Connect there) --- */
+.footer-top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #E0E0E0; /* Linha sutil de separação */
+    padding-bottom: 20px;
+}
+
+.footer-top-content .title {
+   padding: 0;
+   font-size: 1.6rem;
+    
+}
+
+
+
+/* --- Grid Principal do Footer --- */
+.footer-main-grid {
+      display: flex;
+    flex-wrap: wrap; 
+    
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    gap: 30px; /* Espaçamento entre as colunas */
+    
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+    /* Ponto de partida para a distribuição: 20% do espaço disponível */
+     
+    min-width: 200px;
+}
+
+/* --- Tamanhos Específicos das 3 Colunas --- */
+
+/* Coluna 1: MAIOR (ex: 40% da largura total) */
+.footer-info {
+    flex: 1 1 33%; 
+    
+}
+
+/* Colunas 2 e 3: PADRÃO (ex: 28% da largura total) */
+.footer-nav {
+    flex: 1 1 28%; 
+    
+}
+
+.footer-contact {
+    flex: 1 1 33%;
+   
+    
+}
+
+/* --- Estilo dos Títulos das Colunas --- */
+
+/* --- Coluna 1: Info e Social --- */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+    
+    
+}
+
+.footer-logo img{
+  width: 30px;
+}
+
+.footer-logo .logo-text{
+  font-weight: 500;
+  font-style: normal;
+  
+}
+
+.footer-info p {
+   width: 70%;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-info p span{
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+
+
+.social-links a {
+
+    color: var(--color-primary-1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--color-primary-1);
+    color: white;
+}
+
+/* --- Colunas de Links e Contato --- */
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.1rem;
+}
+
+.footer-nav li {
+    margin-bottom: 8px;
+}
+
+.footer-nav a {
+    color: var(--color-primary-5);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--color-primary-1);
+}
+
+.footer-contact .title {
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.footer-nav .title{
+   font-size: 1.2rem;
+    padding: 0;
+}
+
+.footer-contact a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+
+
+
+
+/* --- Barra Inferior (Copyright e Políticas) --- */
+.footer-bottom-bar {
+    background-image:linear-gradient(90deg, #f3e0f2 0%, #f1a0d0 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.policy-links span{
+  font-style: normal;
+  color: #fff;
+}
+
+.policy-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.2s;
+}
+
+.policy-links a:hover {
+    color: var(--color-primary-1);
+}
+
+.policy-links span {
+    margin: 0 5px;
+}
+}
+/* --- Responsividade (Ajustes para telas menores) --- */
+@media (max-width: 900px) {
+    .footer-main-grid {
+        justify-content: flex-start; /* Alinha ao começo */
+        gap: 30px;
+    }
+
+    .footer-column {
+        min-width: 45%; /* Duas colunas em telas médias */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-title {
+        margin-bottom: 15px;
+    }
+    
+    .footer-main-grid {
+        flex-direction: column; /* Colunas empilhadas em telas pequenas */
+    }
+
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 10px;
+    }
+
+}

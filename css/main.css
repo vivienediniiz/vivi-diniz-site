@@ -1,0 +1,105 @@
+
+/* --- Container Principal (ocupa a tela inteira e centraliza o conteúdo) --- */
+main {
+  /* 1. Ativa o Flexbox */
+  display: flex;
+  
+  /* 2. Centraliza o conteúdo horizontalmente */
+  align-items: center; 
+  
+  /* 3. Centraliza o conteúdo verticalmente */
+  justify-content: center; 
+  
+  /* Garante que o 'main' ocupe no mínimo toda a altura da tela */
+  min-height: 100vh; 
+  
+  /* Remove margens padrão do navegador */
+  margin: 0; 
+  
+  /* Animação e gradiente (seu código original, está perfeito!) */
+  background: linear-gradient(135deg, #211a24, #525252, #211a24, #474747); 
+  background-size: 400% 400%; 
+  background-attachment: fixed; 
+  animation: simpleGradientShift 15s ease infinite alternate;
+}
+
+/* --- Container do Conteúdo (agrupa seus textos e imagem) --- */
+#info_principal {
+  /* Ativa o Flexbox para alinhar os itens internos */
+  display: flex;
+  flex-direction: column; /* Organiza os itens em uma coluna (um abaixo do outro) */
+  align-items: center;   /* Alinha todos os itens da coluna no centro horizontal */
+  
+  /* Adiciona um espaço entre os itens */
+  gap: 25px;
+
+  /* Garante que o texto dentro dos elementos filhos também seja centralizado,
+     especialmente se quebrar em múltiplas linhas. */
+  text-align: center; 
+}
+
+/* --- Estilos dos elementos de texto e imagem --- */
+
+#banner {
+  margin: 0;
+  padding: 0;
+}
+
+#nome-main {
+  font-size: var(--font-h3);
+  font-weight: 500;
+  background-image: radial-gradient(
+    circle at top left,
+    #edebeb,
+    #818181
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.function {
+  font-family: var(--font-roboto);
+  font-size: 46px;
+  font-weight: 600;
+  background-image: radial-gradient(
+    circle at top left,
+    #f8c3ff,
+    #c3a2ff,
+    #e73c7e,
+    #ee61b3
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-family: Poppins;
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-image: radial-gradient(
+    circle at top left,
+    #edebeb,
+    #818181
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* --- Animação do Fundo --- */
+@keyframes simpleGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Adicione seus estilos para telas menores aqui, se necessário */
+}
+
