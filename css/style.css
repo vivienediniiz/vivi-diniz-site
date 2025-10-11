@@ -119,7 +119,7 @@ a {
 .title {
   font-size: 2.6rem;
   font-weight: 500;
-  background-image: linear-gradient(90deg, #de85d9 0%, #ee61b3 100%);
+  background-image: linear-gradient(90deg, #de85d9 0%, #9e0fbb 100%);
   /* 2. O fundo é recortado para o formato do texto */
   -webkit-background-clip: text; /* Prefixo para compatibilidade com Chrome/Safari */
   background-clip: text;
