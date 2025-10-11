@@ -1,0 +1,99 @@
+/* --- Estilos Personalizados de Acordo com a Sua Identidade Visual --- */
+
+/* 1. Definindo suas variáveis de cor na raiz do documento */
+:root {
+    --color-primary-1: #de85d9;
+    --color-primary-2: #784875;
+    --color-primary-3: #635766;
+    --color-neutral-0: #fff;
+    --color-neutral-1: #211a24;
+    --color-gradiente: linear-gradient(90deg, #de85d9 0%, #ee61b3 100%);
+}
+
+/* 2. Estilos Gerais com suas cores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+    
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* A MÁGICA ACONTECE AQUI! */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-neutral-0);
+  font-family: var(--fonte-principal);
+}
+
+
+/* 3. Container Principal */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 50px;
+    background-color: var(--color-neutral-0); /* Fundo branco para o conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* 4. Tipografia com seu estilo */
+h1 {
+    font-size: 3em;
+    font-weight: 700; /* Bold */
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+
+    /* --- MÁGICA: Aplicando o gradiente ao texto --- */
+    background: var(--color-gradiente); /* Define o gradiente como fundo do texto */
+    -webkit-background-clip: text; /* Corta o fundo para o formato do texto (para Chrome/Safari) */
+    background-clip: text; /* Padrão */
+    color: transparent; /* Deixa a cor do texto transparente para mostrar o fundo */
+    /* Fallback para navegadores que não suportam a técnica acima */
+    filter: drop-shadow(2px 2px 10px rgba(222, 133, 217, 0.2));
+}
+
+h2 {
+    color: var(--color-primary-2); /* Sua cor roxa escura para subtítulos */
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+a {
+    color: var(--color-primary-1); /* Sua cor rosa/lilás para links */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-2); /* Cor mais escura no hover */
+    text-decoration: underline;
+}
+
+strong {
+    color: var(--color-primary-2);
+}
+
+/* 5. Listas */
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+li {
+    margin-bottom: 10px;
+}
