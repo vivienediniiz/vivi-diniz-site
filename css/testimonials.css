@@ -25,10 +25,22 @@
 .scroll-container {
   display: flex;
   gap: 20px;
-  overflow: hidden;
-  padding: 20px;
   
-  max-width: 100vw; /* garante que haja overflow horizontal */
+  /* --- CORREÇÕES AQUI --- */
+  width: 100%; /* Ocupa 100% do container pai (#testimonials) */
+  overflow-x: auto; /* PERMITE a rolagem horizontal */
+
+  /* Para uma rolagem mais suave em dispositivos de toque */
+  -webkit-overflow-scrolling: touch;
+  
+  /* Esconde a barra de rolagem para um visual mais limpo */
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para IE */
+}
+
+/* Esconde a barra de rolagem para Chrome, Safari, etc. */
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 .depo {

@@ -66,6 +66,9 @@
 }
 
 .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     flex: 1 1 33%;
     
 }
@@ -89,6 +92,7 @@
 .footer-logo .logo-text{
   font-weight: 500;
   font-style: normal;
+  color: var(--color-primary-1);
   
 }
 
