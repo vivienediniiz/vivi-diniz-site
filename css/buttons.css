@@ -168,16 +168,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 10px;
 }
 
 .btn-default {
-  width: 300px;
+  width: 350px;
   height: 46px; 
 }
 
 .btn-default-2 {
-  width: 300px;
+  width: 350px;
   height: 46px; 
 }
 

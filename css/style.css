@@ -71,12 +71,14 @@ html {
 body {
   background-color: var(--color-neutral-1);
   font-family: var(--fonte-principal);
+  
 }
 
 
 
 section {
   padding: 28px 8%;
+  
 }
 
 main {
