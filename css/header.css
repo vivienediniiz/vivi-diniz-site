@@ -1,20 +1,22 @@
 header {
-    padding: 3px 8%;
-    position: sticky;
-    top: 0;
-    /* Fundo semi-transparente (Glassmorphism) */
-    background: rgba(255, 255, 255, 0.13);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.068);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    z-index: 3;
+  padding: 3px 8%;
+  position: sticky;
+  top: 0;
+  /* Fundo semi-transparente (Glassmorphism) */
+  background: rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  z-index: 3;
 }
 
 #mobile_btn i {
-    color: var(--color-primary-1); /* Exemplo: cinza claro. Mude para a cor que desejar! */
-    font-size: 1.5rem; /* Ajuste o tamanho se necessário */
-    transition: color 0.3s ease; /* Adiciona uma transição suave na cor */
+  color: var(
+    --color-primary-1
+  ); /* Exemplo: cinza claro. Mude para a cor que desejar! */
+  font-size: 1.5rem; /* Ajuste o tamanho se necessário */
+  transition: color 0.3s ease; /* Adiciona uma transição suave na cor */
 }
 
 #navbar {
@@ -22,12 +24,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
-#navbar img{
- 
-
+#navbar img {
 }
 
 #nav_logo {
@@ -40,46 +39,46 @@ header {
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin-left: 150px;
+
   gap: 80px;
 }
 
 .nav-item a {
   font-size: 1rem;
-    text-decoration: none;
-    color: var(--color-primary-4); /* Cor padrão */
-    font-weight: 600;
-    position: relative; /* Necessário para a animação do sublinhado */
-    
-    /* ESSENCIAL: Adiciona a transição para animar as mudanças de estado */
-    transition: color 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--color-primary-4); /* Cor padrão */
+  font-weight: 600;
+  position: relative; /* Necessário para a animação do sublinhado */
+
+  /* ESSENCIAL: Adiciona a transição para animar as mudanças de estado */
+  transition: color 0.3s ease-in-out;
 }
 
 /* Adiciona o sublinhado com um pseudo-elemento ::after */
 .nav-item a::after {
-    content: '';
-    position: absolute;
-    width: 0%; /* Começa com largura zero (invisível) */
-    height: 2px;
-    bottom: -5px; /* Posição abaixo do link */
-    left: 0;
-    background-color: var(--color-primary-1); /* Cor Rosa/Lilás (Ajuste o código da sua paleta) */
-    transition: width 0.3s ease-in-out; /* Anima a largura do sublinhado */
+  content: "";
+  position: absolute;
+  width: 0%; /* Começa com largura zero (invisível) */
+  height: 2px;
+  bottom: -5px; /* Posição abaixo do link */
+  left: 0;
+  background-color: var(
+    --color-primary-1
+  ); /* Cor Rosa/Lilás (Ajuste o código da sua paleta) */
+  transition: width 0.3s ease-in-out; /* Anima a largura do sublinhado */
 }
 
 .nav-item.active a {
   color: var(--color-primary-1);
-  
 }
 
 /* Opcional: Efeito hover */
 .nav-item a:hover {
-    color: var(--color-primary-1); 
+  color: var(--color-primary-1);
 }
 .nav-item a:hover::after {
-    width: 100%;
+  width: 100%;
 }
-
 
 #mobile_btn {
   display: none;
@@ -90,10 +89,9 @@ header {
 }
 
 @media screen and (max-width: 1170px) {
-
-.nav-item a {
-  font-size: 1.6rem;
-}
+  .nav-item a {
+    font-size: 1.6rem;
+  }
 
   #nav_list,
   #navbar .btn-default {
@@ -109,17 +107,17 @@ header {
     cursor: pointer;
   }
 
-#mobile_menu {
+  #mobile_menu {
     /* --- Adicionado: Transforma em Flex Container --- */
-    display: flex; 
+    display: flex;
     flex-direction: column; /* Empilha os itens verticalmente */
-    align-items: center;    /* Centraliza na horizontal */
-    justify-content: center;/* Centraliza na vertical */
+    align-items: center; /* Centraliza na horizontal */
+    justify-content: center; /* Centraliza na vertical */
     gap: 50px;
-    
+
     /* Posicionamento */
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -127,27 +125,26 @@ header {
     /* Estilização Visual */
     background-color: #353535;
     padding: 20px;
-    
+
     /* Animação (mantida, mas com display:flex) */
     opacity: 0;
     pointer-events: none;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  }
 
-#mobile_menu.active {
+  #mobile_menu.active {
     /* Exibe o menu com animação */
     opacity: 1;
     pointer-events: auto; /* Permite cliques quando visível */
     transform: translateY(0);
-}
+  }
 
   #mobile_nav_list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin: 12px 0px;
-
   }
 
   #mobile_nav_list .nav-item {
@@ -156,7 +153,5 @@ header {
   }
 }
 
-
 @media screen and (max-width: 480px) {
-  
 }

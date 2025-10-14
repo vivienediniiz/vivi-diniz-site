@@ -29,7 +29,8 @@ main {
   display: flex;
   flex-direction: column; /* Organiza os itens em uma coluna (um abaixo do outro) */
   align-items: center;   /* Alinha todos os itens da coluna no centro horizontal */
-  
+  justify-content: center;
+  margin: 0;
   /* Adiciona um espaço entre os itens */
   gap: 25px;
 
@@ -101,9 +102,7 @@ main {
 
 @media screen and (max-width: 480px) {
   /* Adicione seus estilos para telas menores aqui, se necessário */
-#banner {
-  padding: 0;
-}
+
 
 .function {
   font-family: var(--font-roboto);

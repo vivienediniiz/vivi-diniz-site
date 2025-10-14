@@ -47,6 +47,7 @@
   border: 2px solid var(--Gradiente, #de85d9);
   color: #b6b5b5;
   font-weight: 600;
+  
 }
 
 .btn-default-2:hover {
@@ -63,15 +64,14 @@
   display: block;
   width: 140px;
   height: 35px;
-  justify-content: space-between;
+  
   align-items: center;
-  gap: 10px;
   border-radius: 20px;
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
   padding: 5px 15px 5px 25px;
-
+  word-break: keep-all;
   /* ESTADO INICIAL ("Vazado") */
   background: transparent; /* Fundo transparente */
   border: 2px solid #de85d9; /* Borda com a cor principal */
