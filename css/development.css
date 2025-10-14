@@ -1,8 +1,5 @@
-
-
-
 .styled-hr {
-    width: 100%;
+  width: 100%;
   border: 0; /* Remove a borda padrão */
   height: 2px; /* Define a espessura da linha */
   background-color: #e0e0e0; /* Cor da linha (um cinza claro) */
@@ -10,214 +7,294 @@
   background-color: rgb(212, 211, 212);
 }
 
-#development{
-    display: flex;
- flex-direction: column;
- align-items: center;
- gap: 50px;
+#development {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
   background-color: #ffffff;
-
 }
 
-
-#development .title{
-    padding: 0;
-    font-size: 2.6rem;
-    text-align: center;
+#development .title {
+  padding: 0;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-top: 60px;
 }
 
-#development .description{
-    color: var(--color-primary-5);
-    font-size: 1.2rem;
-    text-align: center;
+#development .description {
+  color: var(--color-primary-5);
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-
-
-.cards-development{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+.cards-development {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
-
-
-#development .title-card{
-    padding: 0;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--color-primary-5);
+#development .title-card {
+  padding: 0;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primary-5);
 }
 
-.card-development{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    padding: 20px;
-    
+.card-development {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  padding: 0px 20px 0px 20px;
 }
 
 /*Segundo Card*/
 
-.card-landpage{
-
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: start;
-    justify-content: center;
-    padding: 20px;
-    
+.card-landpage {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
 }
 
-.card-biolink{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    padding: 20px;
-    
+.card-biolink {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
 }
 
-    
-  .text-development{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 50%;
-    
-    
+.text-development {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 40px;
+  width: 50%;
 }
-
 
 .public {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    
-    
-    
-    
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
 }
 
-#public-1 img{
-    width: 17%;
-    padding: 0;
+#public-1 img {
+  width: 17%;
+  padding: 0;
 }
 
-.img-site img{
-    width: 500px;
+.img-site img {
+  width: 500px;
 }
 
-#public-1{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1rem;
-    color: rgb(138, 138, 138);
-    word-break: keep-all;
-    
-    
-    
+#public-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  color: rgb(138, 138, 138);
+  word-break: keep-all;
 }
 
-.check-list{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 10px;
-    color: rgb(19, 19, 19);
-   
+.check-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  color: rgb(19, 19, 19);
 }
 
-
-.price-button{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    gap: 30px;
-    margin-top: 30px;
+.price-button {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-    
-
-
-#development #price{
-color: black;
-    font-weight: 600;
-    font-size: 1.5rem;
-
+#development #price {
+  color: black;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
-#price span{
-    font-size: 1.2rem;
-    font-weight: 350;
+#price span {
+  font-size: 1.2rem;
+  font-weight: 350;
 }
 
-#development #price #text{
-    color: black;
-    font-weight: 600;
+#development #price #text {
+  color: black;
+  font-weight: 600;
 }
 
-#orcamento{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    color: var(--color-primary-5);
-    background-color: rgba(83, 83, 83, 0.719);
-    padding: 60px;
-    text-align: center;
+#orcamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: var(--color-primary-5);
+  background-color: rgba(83, 83, 83, 0.719);
+  padding: 60px;
+  text-align: center;
 }
 
-.solicitar{
-    font-size: 1.8rem;
-    font-style: italic;
+.solicitar {
+  font-size: 1.8rem;
+  font-style: italic;
 }
-#orcamento a{
-    border: none;
-      width: 27vh;
+#orcamento a {
+  border: none;
+  width: 27vh;
   height: 6vh;
   color: #e0e0e0;
   font-weight: 300;
-  
   text-decoration: none; /* Remove o sublinhado padrão */
-    padding: 5px 10px; /* Adiciona um espaço para visualização */
-    transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
-     white-space: nowrap;
-  
+  padding: 5px 10px; /* Adiciona um espaço para visualização */
+  transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
+  white-space: nowrap;
 }
 
-#orcamento a:hover
-{
-    text-decoration: underline; /* Adiciona o sublinhado */
-    color: var(--color-primary-1); /* Mudar a cor do texto ao passar o mouse (opcional) */
-   
+#orcamento a:hover {
+  text-decoration: underline; /* Adiciona o sublinhado */
+  color: var(
+    --color-primary-1
+  ); /* Mudar a cor do texto ao passar o mouse (opcional) */
 }
 
 .fa-arrow-right {
-    /* Define a rotação (inclinação) */
-    /* Use valores negativos para inclinar para cima e positivos para baixo */
-    transform: rotate(-35deg); 
-    
-    /* Opcional: Adiciona uma transição para que a mudança seja suave se for usada no :hover */
-    transition: transform 0.3s ease; 
-    
-    /* Opcional: Ajuste a margem se a inclinação fizer o ícone parecer deslocado */
-    margin-bottom: 2px;
-    font-size: 0.8em;
-    
+  /* Define a rotação (inclinação) */
+  /* Use valores negativos para inclinar para cima e positivos para baixo */
+  transform: rotate(-35deg);
+
+  /* Opcional: Adiciona uma transição para que a mudança seja suave se for usada no :hover */
+  transition: transform 0.3s ease;
+
+  /* Opcional: Ajuste a margem se a inclinação fizer o ícone parecer deslocado */
+  margin-bottom: 2px;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 480px){
+
+    #development {
+        
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+}
+
+.card-development {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+    padding: 0px 20px 0px 20px;
+  
+  
+}
+
+.text-development {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  
+}
+
+
+
+#development .title {
+  padding: 0;
+  font-size: 2.1rem;
+  text-align: center;
+  margin-top: 60px;
+  text-align: start;
+  
+}
+
+#development .description {
+  color: var(--color-primary-5);
+  font-size: 1.2rem;
+  text-align: start;
+
+}
+
+.card-development {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.price-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 0px;
+}
+
+.card-landpage, .card-biolink {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#orcamento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--color-primary-5);
+  background-color: rgba(83, 83, 83, 0.719);
+  padding: 20px;
+  text-align: center;
+}
+
+.solicitar {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+#orcamento a {
+  border: none;
+  width: 27vh;
+  height: 6vh;
+  color: #e0e0e0;
+  font-weight: 300;
+
+  text-decoration: none; /* Remove o sublinhado padrão */
+  padding: 5px 10px; /* Adiciona um espaço para visualização */
+  transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
+  white-space: nowrap;
+}
+
+#orcamento a:hover {
+  text-decoration: underline; /* Adiciona o sublinhado */
+  color: var(
+    --color-primary-1
+  ); /* Mudar a cor do texto ao passar o mouse (opcional) */
+}
+
+
+
 
 }
