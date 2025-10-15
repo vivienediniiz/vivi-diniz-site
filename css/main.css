@@ -102,11 +102,43 @@ main {
 
 @media screen and (max-width: 480px) {
   /* Adicione seus estilos para telas menores aqui, se necessário */
+  #info_principal {
+    gap: 20px;
+  }
 
-
-.function {
+#nome-main {
+  font-size: 1.3rem;
+  font-weight: 500;
+  background-image: radial-gradient(
+    circle at top left,
+    #edebeb,
+    #818181
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+main .function {
   font-family: var(--font-roboto);
-  font-size: 39px;
+  font-size: 26px;
+  padding: 0 30px 0 30px;
+
+  
+}
+
+main .description {
+  font-family: Poppins;
+  font-size: 1.1rem;
+  font-weight: 500;
+  
+}
+
+main #cta_buttons{
+  gap: 5px;
+}
+
+main .btn-default, main .btn-default-2{
+  height: 60px;
 }
 
 
