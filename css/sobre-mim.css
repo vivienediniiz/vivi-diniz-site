@@ -9,7 +9,7 @@
   
 }
 
-.container {  
+#sobre-mim .container {  
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -19,6 +19,10 @@
   
 
    
+}
+
+.img-sobre-mim{
+  width: 180%;
 }
 
 #sobre-mim .title {

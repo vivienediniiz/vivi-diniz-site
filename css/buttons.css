@@ -8,12 +8,12 @@
 }
 .btn-default {
   display: flex;
-  width: 170px;
-  height: 46px;
+  padding: 5px 30px 5px 30px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 20px;
+  
 
   /* Estado inicial */
   background: var(
@@ -22,7 +22,8 @@
   );
   color: #ffffff;
   border: 2px solid transparent; /* Borda inicial transparente para evitar "salto" */
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1rem;
   cursor: pointer;
 
   /* A mágica da suavidade */
@@ -37,16 +38,16 @@
 }
 .btn-default-2 {
   display: flex;
-  width: 170px;
-  height: 46px;
-  padding: 10px 10px;
+  padding: 5px 30px 5px 30px;
+  
   justify-content: center;
   align-items: center;
   gap: 6px;
   border-radius: 20px;
   border: 2px solid var(--Gradiente, #de85d9);
   color: #b6b5b5;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 1rem;
   
 }
 
@@ -62,12 +63,10 @@
 
 .btn-default-header {
   display: block;
-  width: 140px;
-  height: 35px;
-  
+  padding: 5px 30px 5px 30px;
   align-items: center;
   border-radius: 20px;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   cursor: pointer;
   padding: 5px 15px 5px 25px;
