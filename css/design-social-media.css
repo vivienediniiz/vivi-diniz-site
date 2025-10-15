@@ -6,6 +6,7 @@ body{
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 }
 
 .packs{
@@ -22,22 +23,44 @@ body{
     padding: 20px;
 }
 
+#development .description{
+    text-align: center;
+}
+
 .packs:hover{
     transform: scale(1.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
+.recomended{
+    position: absolute;
+    margin-top: -36px;
+    background-color: rgb(153, 6, 153);
+    border-radius: 15px;
+    padding: 10px;
+    color: #fff;
+
+}
+
 .pacotes #sub-title{
+    margin-top: 20px;
      font-size: 2rem;
      font-weight: 600;
-     text-align: start;
+     text-align: center;
+     
+}
+
+#development .title{
+    text-align: center;
 }
 
 .styled-hr {
   width: 100%;
   border: 0; /* Remove a borda padrão */
-  height: 2px; /* Define a espessura da linha */
+  height: 1px; /* Define a espessura da linha */
   background-color: rgb(212, 211, 212);
+  margin-top: 30px;
+
 }
 
 .icons{
