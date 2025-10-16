@@ -2,7 +2,7 @@
 /* --- Container Principal (ocupa a tela inteira e centraliza o conteúdo) --- */
 main {
   /* 1. Ativa o Flexbox */
-  display: flex;
+ display: flex;
   
   /* 2. Centraliza o conteúdo horizontalmente */
   align-items: center; 
@@ -21,7 +21,7 @@ main {
   background-size: 400% 400%; 
   background-attachment: fixed; 
   animation: simpleGradientShift 15s ease infinite alternate;
-}
+} 
 
 /* --- Container do Conteúdo (agrupa seus textos e imagem) --- */
 #info_principal {
@@ -44,6 +44,7 @@ main {
 #banner {
   margin: 0;
   padding: 0;
+ 
 }
 
 #nome-main {
@@ -101,10 +102,42 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+
+  main {
+  /* 1. Ativa o Flexbox */
+ display: flex;
+  
+  /* 2. Centraliza o conteúdo horizontalmente */
+  align-items: center; 
+  
+  /* 3. Centraliza o conteúdo verticalmente */
+  justify-content: center; 
+  
+  /* Garante que o 'main' ocupe no mínimo toda a altura da tela */
+  min-height: 100vh; 
+  
+  /* Remove margens padrão do navegador */
+  margin: 0; 
+  
+  /* Animação e gradiente (seu código original, está perfeito!) */
+  background:#211a24;  
+  outline:  2px solid rgb(86, 16, 128);
+  padding: 0;
+ 
+} 
+
   /* Adicione seus estilos para telas menores aqui, se necessário */
   #info_principal {
+    margin-top: 0px;
     gap: 20px;
+    
   }
+  
+#banner img {
+  margin: 0;
+  padding: 0;
+  
+}
 
 #nome-main {
   font-size: 1.3rem;
@@ -134,11 +167,12 @@ main .description {
 }
 
 main #cta_buttons{
-  gap: 5px;
+  gap: 20px;
 }
 
 main .btn-default, main .btn-default-2{
-  height: 60px;
+  height: 43px;
+  font-size: 1.2rem;
 }
 
 

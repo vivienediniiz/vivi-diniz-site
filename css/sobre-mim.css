@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 480px) {
   
-.container {  
+#sobre-mim .container {  
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -80,9 +80,8 @@
   border-radius: 30px;
    
 }
-
-.img-sobre-mim img{
-  width: 390px;
+.img-sobre-mim{
+  width: 100%;
 }
 
 

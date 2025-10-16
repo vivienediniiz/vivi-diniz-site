@@ -13,13 +13,13 @@
   align-items: center;
   gap: 50px;
   background-color: #ffffff;
+  
 }
 
 #development .title {
   padding: 0;
   font-size: 2.6rem;
   text-align: center;
-  margin-top: 60px;
 }
 
 #development .description {
@@ -33,6 +33,7 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  padding: 20px;
 }
 
 #development .title-card {
@@ -40,6 +41,7 @@
   font-size: 2rem;
   text-align: start;
   color: var(--color-primary-5);
+  margin-top: 20px;
 }
 
 .card-development {
@@ -59,7 +61,7 @@
   flex-direction: row-reverse;
   align-items: start;
   justify-content: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 .card-biolink {
@@ -68,7 +70,7 @@
   flex-direction: row;
   align-items: start;
   justify-content: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 .text-development {
@@ -108,13 +110,15 @@
   word-break: keep-all;
 }
 
-.check-list {
+.text-development .check-list {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   gap: 10px;
   color: rgb(19, 19, 19);
+  
+  
 }
 
 .price-button {
@@ -182,115 +186,120 @@
   font-size: 0.8em;
 }
 
-@media screen and (max-width: 480px){
+/* --- Media Query para TABLETS (Largura máxima de 768px) --- */
+@media screen and (max-width: 768px) {
+    /* 1. Ajuste Geral dos Cards e Textos */
+    .card-development,
+    .card-landpage,
+    .card-biolink {
+        flex-direction: column !important; 
+        /* Alinha o card principal à esquerda dentro do container */
+        align-items: flex-start; 
+        padding: 20px 10px;
+    }
 
-    #development {
-        
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  background-color: #ffffff;
+    .text-development {
+        width: 90%; 
+        /* Alinha o texto à esquerda */
+        text-align: start; 
+        /* Alinha os itens filhos (parágrafos, títulos) à esquerda */
+        align-items: flex-start;
+        gap: 20px;
+        order: 2; 
+    }
+
+    /* 2. Ajuste de Títulos e Descrições */
+    #development .title {
+        font-size: 2.2rem;
+        text-align: center; /* Mantém o título principal da seção centralizado, se for o desejado */
+    }
+
+    #development .description {
+        font-size: 0.95rem;
+        /* Alinha a descrição da seção à esquerda */
+        text-align: start; 
+        /* É importante que o container pai dessa descrição também não force a centralização */
+    }
+
+    #development .title-card {
+        font-size: 1.6rem;
+        /* Alinha o título do card à esquerda */
+        text-align: start; 
+        margin-top: 10px;
+    }
+    
+    /* Ajusta a lista de itens para alinhar à esquerda */
+    .cards-development {
+        align-items: flex-start;
+    }
+    
+    .check-list {
+        align-items: flex-start;
+    }
+
+    /* 3. Ajuste de Imagens */
+    .img-site {
+        order: 1; 
+        /* Alinha a imagem à esquerda do container do card */
+        align-self: flex-start; 
+    }
+
+    .img-site img {
+        width: 100%; 
+        max-width: 400px; 
+    }
+    
+    /* 4. Ajustes Específicos para Alinhamento à Esquerda */
+    .price-button {
+        /* Garante que os botões e preço estejam alinhados à esquerda do container de texto */
+        justify-content: flex-start; 
+    }
 }
 
-.card-development {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: center;
-    padding: 0px 20px 0px 20px;
-  
-  
-}
+/* --- Media Query para SMARTPHONES (Largura máxima de 480px) --- */
+@media screen and (max-width: 480px) {
+    /* ... (Estilos de fonte e espaçamento do bloco anterior) ... */
+    
+    /* Ajuste do Preço e Botão para alinhar à esquerda no empilhamento */
+    .price-button {
+        flex-direction: column; 
+        /* Alinha preço e botão empilhados à esquerda */
+        align-items: flex-start; 
+        gap: 15px;
+    }
+    
+    /* Mantém o título principal da seção e o orçamento centralizados, pois costumam funcionar bem em mobile */
+    #development .title,
+    #orcamento {
+        text-align: center;
+    }
 
-.text-development {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  width: 100%;
-  
-}
-
-
-
-#development .title {
-  padding: 0;
-  font-size: 2.1rem;
-  text-align: center;
-  margin-top: 60px;
-  text-align: start;
-  
-}
-
-#development .description {
-  color: var(--color-primary-5);
+    
+.solicitar {
   font-size: 1.2rem;
-  text-align: start;
-
-}
-
-.card-development {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
+  font-style: italic;
   
 }
 
 .price-button {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   gap: 30px;
-  margin-top: 0px;
+  margin-top: 30px;
 }
 
-.card-landpage, .card-biolink {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
+.price-button .button-services{
+  width: 22rem;
+
 }
 
-#orcamento {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  color: var(--color-primary-5);
-  background-color: rgba(83, 83, 83, 0.719);
-  padding: 20px;
-  text-align: center;
-}
-
-.solicitar {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-#orcamento a {
-  border: none;
-  width: 27vh;
-  height: 6vh;
-  color: #e0e0e0;
-  font-weight: 300;
-
-  text-decoration: none; /* Remove o sublinhado padrão */
-  padding: 5px 10px; /* Adiciona um espaço para visualização */
-  transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
-  white-space: nowrap;
-}
-
-#orcamento a:hover {
-  text-decoration: underline; /* Adiciona o sublinhado */
-  color: var(
-    --color-primary-1
-  ); /* Mudar a cor do texto ao passar o mouse (opcional) */
 }
 
 
 
 
-}
+
+
+

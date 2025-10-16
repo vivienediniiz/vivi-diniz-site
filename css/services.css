@@ -158,6 +158,20 @@ background-image: linear-gradient(90deg, #de85d9 0%, #ee61b3 100%);
      white-space: nowrap;
 }
 
+.button-services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.button-services .btn-default{
+    width: 98%;
+    height: 40px;
+    font-size: 1.2rem;
+}
+
 
 
 

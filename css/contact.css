@@ -182,4 +182,8 @@ select {
     .form-container {
         padding: 20px; /* REDUZIDO */
     }
+
+    .form-container .btn-default{
+        font-size: 1.2rem;
+    }
 }
