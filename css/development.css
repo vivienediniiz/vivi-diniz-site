@@ -259,7 +259,23 @@
 /* --- Media Query para SMARTPHONES (Largura máxima de 480px) --- */
 @media screen and (max-width: 480px) {
     /* ... (Estilos de fonte e espaçamento do bloco anterior) ... */
-    
+    .cards-development {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  
+}
+
+  .card-development,
+    .card-landpage,
+    .card-biolink {
+        flex-direction: column !important; 
+        /* Alinha o card principal à esquerda dentro do container */
+        align-items: flex-start; 
+        padding: 40px 40px;
+    }
     /* Ajuste do Preço e Botão para alinhar à esquerda no empilhamento */
     .price-button {
         flex-direction: column; 
