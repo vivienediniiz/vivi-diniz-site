@@ -78,18 +78,26 @@
 }
 
 .entrega{
+    width: 100%;
     display: flex;
     flex-direction: column;
+   margin-bottom: 50px;
+    margin-left: 150px;
 }
 
 .entrega .sub-title{
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: start;
 }
 
 .entrega p{
     font-size: 1.5rem;
     margin-bottom: 20px;
+    text-align: start;
+    
 }
+
+
 
 /* Pilares UX/UI */
 .pilares-servico {
@@ -100,7 +108,6 @@
 }
 
 .pilar {
-    width: 520px;
     flex: 1;
     background-color: var(--color-neutral-0);
     padding: 30px;
@@ -272,42 +279,6 @@
 }
 
 
-#orcamento {
-    width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  color: var(--color-primary-5);
-  background-color: rgba(83, 83, 83, 0.719);
-  padding: 60px;
-  text-align: center;
-}
-
-.solicitar {
-  font-size: 1.8rem;
-  font-style: italic;
-}
-#orcamento a {
-  border: none;
-  width: 27vh;
-  height: 6vh;
-  color: #e0e0e0;
-  font-weight: 300;
-  text-decoration: none; /* Remove o sublinhado padrão */
-  padding: 5px 10px; /* Adiciona um espaço para visualização */
-  transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
-  white-space: nowrap;
-}
-
-#orcamento a:hover {
-  text-decoration: underline; /* Adiciona o sublinhado */
-  color: var(
-    --color-primary-1
-  ); /* Mudar a cor do texto ao passar o mouse (opcional) */
-}
-
 .fa-arrow-right {
   /* Define a rotação (inclinação) */
   /* Use valores negativos para inclinar para cima e positivos para baixo */
@@ -334,5 +305,69 @@
     .lista-resultados span {
         width: 100%;
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .servicos-section{
+        padding: 0 15px; /* Adiciona padding lateral para respiro */
+    }
+    #servicos-ui-ux .title{
+        font-size: 2rem;
+        text-align: start;
+        width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
+        margin-top: 30px;
+        padding: 0;
+    }
+
+    #servicos-ui-ux .description{
+        font-size: 1rem;
+        text-align: start;
+        padding: 0 5px; /* Pequeno padding para afastar das bordas */
+    }
+
+    .entrega span{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .entrega{
+        gap: 30px;
+        margin-bottom: 0px;
+    margin-left: 0px;
+    }
+    .entrega .sub-title{
+        margin-top: 20px;
+        font-size: 1.4rem;
+    }
+    .pilares-servico{
+        
+       flex-direction: column;
+
+    }
+
+    .resultados-section .title{
+        margin-bottom: 35px;
+    }
+
+    #orcamento a {
+        /* Ocupa a largura total do container */
+        width: 100%; 
+        height: auto;
+        text-align: center; /* Centraliza o texto do botão */
+        /* padding: 15px 0; para botões maiores, ajuste conforme necessário */
+        padding: 15px 10px; /* Aumenta o padding para ser mais fácil de clicar */
+        /* Garante que o container do botão (orcamento) fique com largura total */
+        box-sizing: border-box; 
+    }
+    
+    #orcamento {
+        padding: 40px 15px; /* Reduz o padding da seção orcamento */
+        text-align: center;
+        gap: 18px;
+    }
+
+    .solicitar{
+      font-size: 1.3rem;
+      
     }
 }

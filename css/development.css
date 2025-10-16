@@ -24,7 +24,7 @@
 
 #development .description {
   color: var(--color-primary-5);
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-align: start;
 }
 
@@ -83,32 +83,6 @@
 
 
 
-.public {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 0;
-}
-
-#public-1 img {
-  width: 17%;
-  padding: 0;
-}
-
-.img-site img {
-  width: 500px;
-}
-
-#public-1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1rem;
-  color: rgb(138, 138, 138);
-  word-break: keep-all;
-}
 
 .text-development .check-list {
   display: flex;
@@ -186,133 +160,132 @@
   font-size: 0.8em;
 }
 
-/* --- Media Query para TABLETS (Largura máxima de 768px) --- */
-@media screen and (max-width: 768px) {
-    /* 1. Ajuste Geral dos Cards e Textos */
+
+/* --- Media Query para SMARTPHONES (Largura máxima de 480px) --- */
+@media screen and (max-width: 480px) {
+  /* 1. Ajuste Geral da Seção */
+    #development {
+        gap: 30px;
+        /* Garante que o conteúdo dentro da seção development fique alinhado à esquerda */
+        align-items: flex-start;
+        padding: 0 15px; /* Adiciona padding lateral para respiro */
+    }
+
+    /* 2. Ajuste de Títulos e Textos */
+    
+    /* Mantém o Título principal da seção CENTRALIZADO */
+    #development .title {
+        font-size: 2rem;
+        text-align: start;
+        width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
+        margin-top: 30px;
+    }
+
+    /* Reduz e alinha à ESQUERDA a descrição principal */
+    #development .description {
+        font-size: 1rem;
+        text-align: start;
+        padding: 0 5px; /* Pequeno padding para afastar das bordas */
+    }
+    
+    /* Reduz e alinha à ESQUERDA o título do card */
+    #development .title-card {
+        font-size: 1.5rem;
+        text-align: start;
+        margin-top: 10px;
+    }
+
+    /* 3. Ajuste de Layout dos Cards (Empilhamento e Alinhamento) */
+    
     .card-development,
     .card-landpage,
     .card-biolink {
+        /* Transforma de row para COLUMN (empilha verticalmente) */
         flex-direction: column !important; 
-        /* Alinha o card principal à esquerda dentro do container */
+        /* Alinha os itens do card à ESQUERDA */
         align-items: flex-start; 
-        padding: 20px 10px;
+        /* Remove o padding lateral excessivo do desktop */
+        padding: 20px 0; 
     }
 
     .text-development {
-        width: 90%; 
-        /* Alinha o texto à esquerda */
-        text-align: start; 
-        /* Alinha os itens filhos (parágrafos, títulos) à esquerda */
-        align-items: flex-start;
+        /* Ocupa a largura total */
+        width: 100%; 
         gap: 20px;
+        /* Garante que o conteúdo de texto esteja alinhado à ESQUERDA */
+        align-items: flex-start; 
+        /* Para o card-landpage, garante que o texto fique embaixo da imagem */
         order: 2; 
     }
-
-    /* 2. Ajuste de Títulos e Descrições */
-    #development .title {
-        font-size: 2.2rem;
-        text-align: center; /* Mantém o título principal da seção centralizado, se for o desejado */
-    }
-
-    #development .description {
-        font-size: 0.95rem;
-        /* Alinha a descrição da seção à esquerda */
-        text-align: start; 
-        /* É importante que o container pai dessa descrição também não force a centralização */
-    }
-
-    #development .title-card {
-        font-size: 1.6rem;
-        /* Alinha o título do card à esquerda */
-        text-align: start; 
-        margin-top: 10px;
-    }
     
-    /* Ajusta a lista de itens para alinhar à esquerda */
+    /* Garante que a imagem venha primeiro no card-landpage */
+    .img-site {
+        order: 1; 
+        /* Alinha a imagem à esquerda */
+        align-self: flex-start;
+    }
+
+    .img-site img {
+        /* Imagem ocupa 100% da largura do seu container */
+        width: 100%; 
+        /* A imagem original que tinha width: 500px, agora é fluida */
+        max-width: 100%; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* 4. Alinhamento de Listas e Preço/Botão */
+    
     .cards-development {
+        padding: 0;
         align-items: flex-start;
+        width: 100%;
     }
-    
+
     .check-list {
         align-items: flex-start;
     }
 
-    /* 3. Ajuste de Imagens */
-    .img-site {
-        order: 1; 
-        /* Alinha a imagem à esquerda do container do card */
-        align-self: flex-start; 
-    }
-
-    .img-site img {
-        width: 100%; 
-        max-width: 400px; 
-    }
-    
-    /* 4. Ajustes Específicos para Alinhamento à Esquerda */
     .price-button {
-        /* Garante que os botões e preço estejam alinhados à esquerda do container de texto */
-        justify-content: flex-start; 
-    }
-}
-
-/* --- Media Query para SMARTPHONES (Largura máxima de 480px) --- */
-@media screen and (max-width: 480px) {
-    /* ... (Estilos de fonte e espaçamento do bloco anterior) ... */
-    .cards-development {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  
-}
-
-  .card-development,
-    .card-landpage,
-    .card-biolink {
-        flex-direction: column !important; 
-        /* Alinha o card principal à esquerda dentro do container */
-        align-items: flex-start; 
-        padding: 40px 40px;
-    }
-    /* Ajuste do Preço e Botão para alinhar à esquerda no empilhamento */
-    .price-button {
+        /* Empilha preço e botão */
         flex-direction: column; 
-        /* Alinha preço e botão empilhados à esquerda */
+        /* Alinha os itens empilhados à ESQUERDA */
         align-items: flex-start; 
-        gap: 15px;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .price-button .button-services{
+      width: 350px;
     }
     
-    /* Mantém o título principal da seção e o orçamento centralizados, pois costumam funcionar bem em mobile */
-    #development .title,
+    /* 5. Ajuste do BOTÃO (100% da largura) */
+    
+    /* Alvo o botão dentro da seção #orcamento */
+    #orcamento a {
+        /* Ocupa a largura total do container */
+        width: 100%; 
+        height: auto;
+        text-align: center; /* Centraliza o texto do botão */
+        /* padding: 15px 0; para botões maiores, ajuste conforme necessário */
+        padding: 15px 10px; /* Aumenta o padding para ser mais fácil de clicar */
+        /* Garante que o container do botão (orcamento) fique com largura total */
+        box-sizing: border-box; 
+    }
+    
     #orcamento {
+        padding: 40px 15px; /* Reduz o padding da seção orcamento */
         text-align: center;
+        gap: 18px;
     }
 
-    
-.solicitar {
-  font-size: 1.2rem;
-  font-style: italic;
-  
-}
+    .solicitar{
+      font-size: 1.3rem;
+      
+    }
 
-.price-button {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 30px;
-  margin-top: 30px;
-}
-
-.price-button .button-services{
-  width: 22rem;
 
 }
-
-}
-
 
 
 
