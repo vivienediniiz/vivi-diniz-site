@@ -34,20 +34,7 @@
 
     .faixa-1 {
         display: none;
-        /* 1. Muda a direção para empilhar os itens verticalmente */
-        flex-direction: row;
         
-        /* 2. Centraliza os itens horizontalmente */
-        align-items: center;
-
-        /* 3. Adiciona um espaçamento entre os itens empilhados */
-        gap: 20px; /* Ajuste o valor conforme necessário */
-
-        /* 4. Ajusta o padding para telas menores */
-        padding: 25px 15px;
-
-        /* Opcional: Centraliza o texto de qualquer parágrafo dentro da faixa */
-        text-align: center;
     }
 
     .faixa-1 img {

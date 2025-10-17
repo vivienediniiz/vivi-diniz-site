@@ -2,11 +2,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Seleciona o contêiner com o ID 'carousel'
-    const scrollContainer = document.getElementById("carousel");
+    const scrollContainer = document.getElementById("carousel-design");
 
     // Verifica se o elemento existe
     if (!scrollContainer) {
-        console.error("Elemento #carousel não encontrado.");
+        console.error("Elemento #carousel-design não encontrado.");
         return;
     }
 

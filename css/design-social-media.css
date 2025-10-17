@@ -2,36 +2,30 @@
 
 #scroll-image{
     
-    display: flex;
+     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0;
+    text-align: center;
+    gap: 40px;
+    padding: 60px;
     
-    margin: 0;
 }
 
 /* 1. Contêiner Principal ('A Janela') */
-.scroll-container {
-    width: 100%; /* Largura da área visível */
-    max-width: 1200px;
-    height: 250px; /* Altura da área visível */
-    
-    /* ESSENCIAL: Permite a rolagem horizontal e esconde o que estiver fora. */
-    overflow-x: scroll; 
-    overflow-y: hidden;
-    
-    /* Configuração Flexbox para alinhar os itens horizontalmente. */
+.scroll-container-design {
     display: flex;
-    
-    /* Remove a barra de rolagem horizontal padrão do navegador (Chrome/Edge/Safari) */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  gap: 20px;
+  overflow: scroll;
+  padding: 20px;
+  max-width: 100vw; /* garante que haja overflow horizontal */
+   /* As 3 linhas abaixo são para ESCONDER a barra de rolagem */
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para IE e Edge */
     
 }
 
 /* Esconde a barra de rolagem no Webkit (Chrome, Safari, Opera) */
-.scroll-container::-webkit-scrollbar {
+.scroll-container-design::-webkit-scrollbar {
     display: none;
 }
 
@@ -51,7 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+   
 }
 
 /* 3. Estilo das Imagens */
@@ -85,6 +79,7 @@
 }
 
 #development .title{
+    margin-top: 60px;
     padding: 0;
     text-align: center;
 }

@@ -21,6 +21,7 @@ main {
   background-size: 400% 400%; 
   background-attachment: fixed; 
   animation: simpleGradientShift 15s ease infinite alternate;
+  
 } 
 
 /* --- Container do Conteúdo (agrupa seus textos e imagem) --- */
@@ -32,7 +33,7 @@ main {
   justify-content: center;
   margin: 0;
   /* Adiciona um espaço entre os itens */
-  gap: 25px;
+  gap: 20px;
 
   /* Garante que o texto dentro dos elementos filhos também seja centralizado,
      especialmente se quebrar em múltiplas linhas. */
@@ -42,8 +43,14 @@ main {
 /* --- Estilos dos elementos de texto e imagem --- */
 
 #banner {
-  margin: 0;
+  margin-top: 70px;
   padding: 0;
+ 
+}
+
+#banner img{
+  padding: 0;
+  margin:0 ;
  
 }
 
@@ -121,20 +128,21 @@ main {
   
   /* Animação e gradiente (seu código original, está perfeito!) */
   background:#211a24;  
-  outline:  2px solid rgb(86, 16, 128);
+
   padding: 0;
+   
  
 } 
 
   /* Adicione seus estilos para telas menores aqui, se necessário */
   #info_principal {
     margin-top: 0px;
-    gap: 20px;
+    gap: 10px;
     
   }
   
 #banner img {
-  margin: 0;
+  margin-top: 40px;
   padding: 0;
   
 }
@@ -171,9 +179,14 @@ main #cta_buttons{
 }
 
 main .btn-default, main .btn-default-2{
-  height: 43px;
+  height: 50px;
   font-size: 1.2rem;
 }
+
+#info_principal .social-links{
+  margin-top: 50px;
+}
+
 
 
 

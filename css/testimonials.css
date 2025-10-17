@@ -22,7 +22,7 @@
   
 }
 
-.scroll-container {
+#testimonials .scroll-container {
 display: flex;
   gap: 20px;
   overflow: scroll;
@@ -34,7 +34,7 @@ display: flex;
 }
 
 /* Esconde a barra de rolagem para Chrome, Safari, etc. */
-.scroll-container::-webkit-scrollbar {
+#testimonials .scroll-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -77,7 +77,7 @@ display: flex;
 
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 480px) {
   
 
       #testimonials .title{
