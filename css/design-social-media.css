@@ -1,6 +1,68 @@
-body{
-    color: aliceblue;
+
+
+#scroll-image{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    
+    margin: 0;
 }
+
+/* 1. Contêiner Principal ('A Janela') */
+.scroll-container {
+    width: 100%; /* Largura da área visível */
+    max-width: 1200px;
+    height: 250px; /* Altura da área visível */
+    
+    /* ESSENCIAL: Permite a rolagem horizontal e esconde o que estiver fora. */
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    
+    /* Configuração Flexbox para alinhar os itens horizontalmente. */
+    display: flex;
+    
+    /* Remove a barra de rolagem horizontal padrão do navegador (Chrome/Edge/Safari) */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    
+}
+
+/* Esconde a barra de rolagem no Webkit (Chrome, Safari, Opera) */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* 2. Estilo dos Itens (Contêiner de cada Imagem) */
+.scroll-item {
+    /* Garante que o item não encolha. Isso é crucial! */
+    flex-shrink: 0; 
+    
+    width: 200px; /* Largura fixa de cada item no scroll */
+    height: 100%; /* Ocupa a altura total do contêiner */
+    margin-right: 15px; /* Espaçamento entre os itens */
+    
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    
+    /* Alinhamento de conteúdo dentro do item, se houver texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+/* 3. Estilo das Imagens */
+.scroll-item img {
+    width: 100%; /* A imagem preenche o item */
+    height: 100%; 
+    /* Garante que a imagem preencha o espaço sem distorcer (cortando se necessário) */
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
 
 .pacotes{
     margin-top: 70px;
@@ -21,6 +83,12 @@ body{
     color: var(--color-neutral-1);
     padding: 20px;
 }
+
+#development .title{
+    padding: 0;
+    text-align: center;
+}
+
 
 #development .description{
     text-align: center;
@@ -49,9 +117,7 @@ body{
      
 }
 
-#development .title{
-    text-align: center;
-}
+
 
 .styled-hr {
   width: 100%;
