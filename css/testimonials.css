@@ -25,17 +25,22 @@
 #testimonials .scroll-container {
 display: flex;
   gap: 20px;
-  overflow: scroll;
+  overflow: hidden; /* <--- Troque para 'hidden' */
   padding: 20px;
-  max-width: 100vw; /* garante que haja overflow horizontal */
-   /* As 3 linhas abaixo são para ESCONDER a barra de rolagem */
-  scrollbar-width: none; /* Para Firefox */
-  -ms-overflow-style: none; /* Para IE e Edge */
+  max-width: 100vw;
+  /* As linhas abaixo agora são menos relevantes, mas podem ficar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Esconde a barra de rolagem para Chrome, Safari, etc. */
 #testimonials .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+/* OPCIONAL: Adicionar rolagem suave para melhor visualização (em alguns navegadores) */
+#testimonials .scroll-container {
+    scroll-behavior: smooth; /* Adicione esta linha */
 }
 
 .depo {

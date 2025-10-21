@@ -43,13 +43,7 @@
    
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    
-}
+
 
 /* Títulos e Header */
 .servicos-section .title{
@@ -63,12 +57,6 @@
     margin-bottom: 10px;
 }
 
-.section-header h2 {
-    font-size: 2.5rem;
-    color: var(--cor-texto-principal);
-    margin-bottom: 20px;
-    font-weight: 700;
-}
 
 .section-header .subtitle {
     font-size: 1.1rem;
@@ -106,9 +94,11 @@
     flex-direction: row;
     gap: 30px;
     margin-bottom: 60px;
+    padding: 30px;
 }
 
 .pilar {
+    padding: 30px;
     flex: 1;
     background-color: var(--color-neutral-0);
     padding: 30px;
@@ -155,6 +145,7 @@
     gap: 20px;
     white-space: normal;
     margin-top: 20px;
+  
      
 }
 
