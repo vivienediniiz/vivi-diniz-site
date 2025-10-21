@@ -177,3 +177,103 @@ background-image: linear-gradient(90deg, #de85d9 0%, #ee61b3 100%);
 
 }
 
+
+@media (min-width: 768px) and (max-width: 1024px){
+ .cards-services{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    gap: 45px;
+    
+}
+
+.card-service{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+    background-color: rgba(240, 240, 237, 0.137);
+    border-radius: 15px;
+    margin-top: 50px;
+    border: solid 2px;
+    border-color: #bf56a8;
+
+}
+
+.card-service:hover{
+    cursor: pointer;
+    background-color: #6d696d48;
+    border: solid 2px;
+    border-color: var(--color-primary-3);
+    
+   
+}
+
+.card-service #description_card{
+    font-size: 1.8rem;
+}
+
+#hero-subtitle{
+    font-size: 3rem;
+  font-weight: 500;
+background-image: linear-gradient(90deg, #de85d9 0%, #ee61b3 100%);
+  /* 2. O fundo é recortado para o formato do texto */
+  -webkit-background-clip: text; /* Prefixo para compatibilidade com Chrome/Safari */
+  background-clip: text;
+
+  /* 3. A cor da fonte fica transparente para revelar o fundo */
+  color: transparent;
+
+}
+
+.check{
+   display: grid;
+   grid-template-columns: auto auto auto ;
+  gap: 15px;
+    color: var(--color-primary-3);
+    font-size:2rem;
+    font-weight: 500;
+    
+    
+}
+
+.item{
+    width: 100%;
+  padding: 5px 10px 5px 10px;
+  border: 1.5px solid #3333333f;
+  border-radius: 15px;
+  overflow-wrap: break-word;
+  font-weight: 600;
+  background-color: #92909234;
+   font-size: 1.5rem;
+   text-align: start;
+   color: #aaaaaa;
+   text-align: center;
+   white-space: nowrap;
+}
+
+#price #text{
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.saiba-mais{
+    color: #b6b5b5;
+    font-size: 1.5rem;
+}
+
+.button-services{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button-services .btn-default{
+    width: 300px;
+    height: 60px;
+    font-size: 1.5rem;
+}
+}

@@ -86,3 +86,48 @@
 
 
 }
+
+@media (min-width: 768px) and (max-width: 1024px){
+  #sobre-mim .container {  
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+  border-radius: 30px;
+  
+
+   
+}
+
+.img-sobre-mim{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ 
+}
+
+.img-sobre-mim img{
+  width: 768px;
+}
+
+#sobre-mim #text {
+  color: var(--color-primary-2);
+  text-align: start;
+  font-size: 2rem;
+  font-weight: 600;
+  
+  
+  
+}
+
+#sobre-mim .description {
+  text-align: start;
+  color: rgba(86, 86, 87, 0.575);
+  font-size: 1.5rem;
+}
+
+
+}

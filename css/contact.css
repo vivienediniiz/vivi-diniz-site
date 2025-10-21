@@ -187,3 +187,27 @@ select {
         font-size: 1.2rem;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px){
+        #contact{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 40px;
+    font-family: var(--fonte-principal);
+    outline: 1px solid red;
+    
+}
+
+#contact .description{
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: start;
+
+}
+
+.form-row{
+    width: 100%;
+}
+}

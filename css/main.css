@@ -192,3 +192,33 @@ main .btn-default, main .btn-default-2{
 
 }
 
+@media (min-width: 768px) and (max-width: 1024px){
+  main #cta_buttons{
+    display: flex;
+    flex-direction: column;
+  gap: 20px;
+}
+
+main .btn-default, main .btn-default-2{
+  width: 350px;
+  height: 60px;
+  font-size: 1.2rem;
+}
+
+ #info_principal {
+  
+    margin-top: 0px;
+    gap: 60px;
+    
+  }
+
+  #home .description{
+    font-size: 2rem;
+  }
+
+  .social-links .fa-solid .fa-phone{
+    width: 150%;
+  }
+
+}
+
