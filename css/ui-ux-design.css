@@ -308,7 +308,6 @@
         font-size: 2rem;
         text-align: start;
         width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
-        margin-top: 30px;
         padding: 0;
     }
 
@@ -331,11 +330,16 @@
         margin-top: 20px;
         font-size: 1.4rem;
     }
-    .pilares-servico{
-        
-       flex-direction: column;
+    
+    .pilares-servico {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 5px;
+}
 
-    }
+
 
     .resultados-section .title{
         margin-bottom: 35px;

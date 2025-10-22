@@ -196,7 +196,6 @@ select {
     justify-content: center;
     gap: 40px;
     font-family: var(--fonte-principal);
-    outline: 1px solid red;
     
 }
 
@@ -209,5 +208,16 @@ select {
 
 .form-row{
     width: 100%;
+}
+
+.form-container {
+    background-color: #2c2c2c;
+    padding: 30px; /* REDUZIDO de 40px para 30px */
+    border-radius: 15px; /* REDUZIDO o raio da borda */
+    width: 100%;
+    max-width: 750px; /* REDUZIDO de 650px para 550px (largura total) */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    color: #f0f0f0;
 }
 }
