@@ -256,7 +256,12 @@ span{
 
 @media screen and (max-width: 480px){
     #development .title{
+        
+        font-size: 2rem;
         text-align: start;
+        width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
+        margin-top: 80px;
+        margin-bottom: 20px;
     }
     .pacotes{
         
@@ -270,6 +275,7 @@ span{
 #development .description{
     text-align: start;
     margin-bottom: 30px;
+     font-size: 1rem;
 }
 
 .pacotes .btn-default{

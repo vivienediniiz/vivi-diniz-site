@@ -183,14 +183,14 @@
         font-size: 2rem;
         text-align: start;
         width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
-        margin-top: 30px;
+        margin-top: 80px;
     }
 
     /* Reduz e alinha à ESQUERDA a descrição principal */
     #development .description {
         font-size: 1rem;
         text-align: start;
-        padding: 0 5px; /* Pequeno padding para afastar das bordas */
+       
     }
     
     /* Reduz e alinha à ESQUERDA o título do card */

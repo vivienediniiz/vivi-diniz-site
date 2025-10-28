@@ -91,40 +91,31 @@
 /* Pilares UX/UI */
 .pilares-servico {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
     margin-bottom: 60px;
     padding: 30px;
 }
 
 .pilar {
-    padding: 30px;
-    flex: 1;
-    background-color: var(--color-neutral-0);
-    padding: 30px;
-    border-radius: 12px;  
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+   
     
 }
 
-.pilar:hover{
-    transform: scale(3.3);
-    box-shadow: 0 8px 16px rgba(240, 238, 238, 0.3); 
-}
+
 
 .pilar .title {
     font-size: 1.8rem;
     margin-top: 0;
     margin-bottom: 5px;
     padding: 0;
-    margin-top: 20px;
+    
 }
 
 .pilar .tag {
     font-size: 0.9rem;
     font-weight: normal;
     color: var(--color-primary-3);
-    background-color: var(--cor-texto-secundario);
     padding: 4px 8px;
     border-radius: 4px;
     opacity: 0.7;
@@ -151,7 +142,6 @@
 
 .tabela-beneficios .item {
     display: flex;
-    background-color: #fff;
     border: none;
     white-space: normal; 
     font-weight: 400;
@@ -161,7 +151,7 @@
 
 .tabela-beneficios .item p{
    font-size: 1rem;
-   color: var(--color-neutral-1);
+   color: var(--color-neutral-0);
    font-weight: 400;
 }
 
@@ -308,13 +298,15 @@
         font-size: 2rem;
         text-align: start;
         width: 100%; /* Garante que ele ocupe toda a largura para centralizar corretamente */
+        margin-top: 80px;
+        margin-bottom: 20px;
         padding: 0;
     }
 
     #servicos-ui-ux .description{
-        font-size: 1rem;
-        text-align: start;
-        padding: 0 5px; /* Pequeno padding para afastar das bordas */
+         text-align: start;
+    margin-bottom: 30px;
+     font-size: 1rem;
     }
 
     .entrega span{
@@ -329,6 +321,7 @@
     .entrega .sub-title{
         margin-top: 20px;
         font-size: 1.4rem;
+         
     }
     
     .pilares-servico {
@@ -339,10 +332,28 @@
     padding: 5px;
 }
 
+.pilar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    
+   
+}
+
+.pilar .title{
+    padding: 0;
+    outline: 1px solid red;
+    margin: 0;
+}
+
 
 
     .resultados-section .title{
         margin-bottom: 35px;
+       
     }
 
     #orcamento a {
