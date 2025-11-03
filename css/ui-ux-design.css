@@ -91,13 +91,15 @@
 /* Pilares UX/UI */
 .pilares-servico {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
     margin-bottom: 60px;
     padding: 30px;
 }
 
 .pilar {
+    width: 400px;
+     outline: 1px solid rgb(95, 13, 172);
    
     
 }
@@ -136,6 +138,7 @@
     gap: 20px;
     white-space: normal;
     margin-top: 20px;
+    outline: 1px solid red;
   
      
 }
@@ -145,6 +148,8 @@
     border: none;
     white-space: normal; 
     font-weight: 400;
+    background-color: var(--color-neutral-1);
+     outline: 1px solid red;
     
     
 }

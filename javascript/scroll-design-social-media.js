@@ -67,3 +67,42 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicia o scroll automático
     autoScroll();
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('.carousel-wrapper');
+    const radios = Array.from(wrapper.querySelectorAll('input[name="carousel"]'));
+    const totalSlides = radios.length;
+
+    const prevBtn = wrapper.querySelector('.prev-btn');
+    const nextBtn = wrapper.querySelector('.next-btn');
+
+    // Função para avançar ou retroceder (sem dar a volta)
+    const navigate = (direction) => {
+        // Encontra o índice do rádio checado
+        const currentIndex = radios.findIndex(radio => radio.checked);
+        let nextIndex = currentIndex; 
+        
+        if (direction === 'next' && currentIndex < totalSlides - 1) {
+            // Avança, desde que não seja o último slide
+            nextIndex = currentIndex + 1;
+        } else if (direction === 'prev' && currentIndex > 0) {
+            // Volta, desde que não seja o primeiro slide
+            nextIndex = currentIndex - 1;
+        } else {
+            // Se tentar ir além dos limites, apenas ignora
+            return; 
+        }
+
+        // Marca o novo rádio como 'checked'. 
+        // ISSO DISPARA A MUDANÇA VISUAL E O OCULTAMENTO/EXIBIÇÃO DOS BOTÕES VIA CSS.
+        radios[nextIndex].checked = true;
+    };
+
+    // Event Listeners para os Botões
+    prevBtn.addEventListener('click', () => navigate('prev'));
+    nextBtn.addEventListener('click', () => navigate('next'));
+    
+    // Removemos todo o loop "radios.forEach" e o código que forçava "display: block"
+    // pois o CSS deve controlar a visibilidade das setas.
+});

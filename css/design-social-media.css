@@ -1,5 +1,7 @@
 
-
+body{
+    background-color: #ffffff;
+}
 #scroll-image{
     
      display: flex;
@@ -72,10 +74,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    background-color: #fff;
+    background-color: #e0e0e0;
     border-radius: 20px;
     color: var(--color-neutral-1);
     padding: 20px;
+    
 }
 
 #development .title{
@@ -87,6 +90,7 @@
 
 #development .description{
     text-align: center;
+    color: #5f5f5f;
 }
 
 .packs:hover{
@@ -218,6 +222,147 @@ span{
     font-weight: 600;
 }
 
+#social-media-desktop{
+    /* ... outras propriedades */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;
+}
+
+#social-media-mobile{
+ display: none;
+}
+
+.carousel-wrapper {
+    
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 1000px;
+    position: relative;
+    overflow: hidden;
+    padding: 80px;
+}
+
+/* Esconde os inputs de rádio */
+.carousel-wrapper input[type="radio"] {
+    display: none;
+}
+
+/* Área onde os slides são empilhados */
+.slides-area {
+    position: relative;
+    height: 350px; 
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    /* Cor de fundo definida no HTML para variar */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo levemente opaco para o texto */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color:var(--color-primary-2); /* Roxo escuro */
+    margin-top: 0;
+}
+.content p {
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* --- Lógica de Exibição --- */
+#s1:checked ~ .slides-area .slide:nth-child(1),
+#s2:checked ~ .slides-area .slide:nth-child(2),
+#s3:checked ~ .slides-area .slide:nth-child(3),
+#s4:checked ~ .slides-area .slide:nth-child(4),
+#s5:checked ~ .slides-area .slide:nth-child(5) {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* --- Estilo dos Botões de Navegação (Setas) --- */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-primary-1); /* Lilás semi-transparente */
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 30;
+    font-size: 24px;
+    line-height: 1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: var(--color-primary-2); /* Lilás mais sólido no hover */
+}
+
+/* Desabilita botões quando na primeira/última imagem (CSS não pode desabilitar, mas pode esconder) */
+#s1:checked ~ .prev-btn { display: none; } /* Esconde Anterior no Slide 1 */
+#s5:checked ~ .next-btn { display: none; } /* Esconde Próximo no Slide 5 */
+
+
+/* --- Estilo dos Pontos de Navegação (Ajustados) --- */
+.navigation-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid #3b3b3b;
+}
+
+/* Ponto ativo */
+#s1:checked ~ .navigation-dots .dot:nth-child(1),
+#s2:checked ~ .navigation-dots .dot:nth-child(2),
+#s3:checked ~ .navigation-dots .dot:nth-child(3),
+#s4:checked ~ .navigation-dots .dot:nth-child(4),
+#s5:checked ~ .navigation-dots .dot:nth-child(5) {
+    background-color: var(--color-primary-1); /* Lilás ativo */
+    transform: scale(1.2);
+}
+
 #orcamento {
   display: flex;
   flex-direction: column;
@@ -225,7 +370,7 @@ span{
   justify-content: center;
   gap: 50px;
   color: var(--color-primary-5);
-  background-color: rgba(83, 83, 83, 0.719);
+  background-color: rgba(189, 189, 189, 0.719);
   padding: 60px;
   text-align: center;
 }
@@ -238,12 +383,13 @@ span{
   border: none;
   width: 27vh;
   height: 6vh;
-  color: #e0e0e0;
+  color: #e22ee2;
   font-weight: 300;
   text-decoration: none; /* Remove o sublinhado padrão */
   padding: 5px 10px; /* Adiciona um espaço para visualização */
   transition: text-decoration 0.3s; /* Adiciona transição suave (opcional) */
   white-space: nowrap;
+  font-weight: 600;
 }
 
 #orcamento a:hover {
@@ -294,6 +440,61 @@ span{
 }
 
 
+#social-media-desktop{
+    display: none;
+}
+
+#social-media-mobile{
+ display: block;
+}
+
+
+
+
+.carousel-wrapper {
+        /* Ocupa 95% da largura da tela, com uma margem lateral mínima */
+        height: 1000px;
+        padding: 0;
+    }
+
+    .slide {
+        width: 100%;
+    height: 1000px;
+    
+    }
+
+    .content {
+        padding: 0; /* Reduz o padding interno do bloco de texto */
+    }
+
+    .content h2 {
+        font-size: 1.8em; /* Reduz o tamanho do título */
+    }
+    
+    .content p {
+        font-size: 1em; /* Reduz o tamanho do parágrafo */
+    }
+
+    /* Ajusta o tamanho dos botões de navegação */
+    .prev-btn, .next-btn {
+        padding: 10px 8px;
+        font-size: 20px;
+    }
+    
+    .prev-btn {
+        left: 5px; /* Aproxima a seta da borda */
+    }
+
+    .next-btn {
+        right: 5px; /* Aproxima a seta da borda */
+    }
+    
+    /* Ajusta o tamanho dos pontos */
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
 #orcamento {
   display: flex;
   flex-direction: column;
@@ -309,12 +510,13 @@ span{
 .solicitar {
   font-size: 1.2rem;
   font-style: italic;
+  color: rgb(255, 255, 255);
 }
 #orcamento a {
   border: none;
   width: 27vh;
   height: 6vh;
-  color: #e0e0e0;
+  color: #f794e9;
   font-weight: 300;
   text-decoration: none; /* Remove o sublinhado padrão */
   padding: 5px 10px; /* Adiciona um espaço para visualização */
