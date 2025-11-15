@@ -24,21 +24,7 @@ main {
   
 } 
 
-.gradient-animado {
-  position: absolute;
-  /* 🎨 Cores e Ângulo do Gradiente */
-  /* Ajuste os códigos de cor para os tons de rosa e roxo que você deseja */
- border-radius: 444px;
-background: radial-gradient(41.09% 41.09% at 50% 50.12%, #EA4EE0 0%, rgba(196, 67, 228, 0.96) 30.77%, rgba(33, 26, 36, 0.00) 100%);
-   
-  /* Garante que o elemento ocupe o espaço desejado, por exemplo, a tela inteira */
-  width: 444px;
-height: 700px;
-left: -600px;
-top: -20px;
-opacity: 50%;
-  
-}
+
 
 
 

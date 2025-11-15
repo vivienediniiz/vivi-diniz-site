@@ -57,6 +57,7 @@ body{
     /* Garante que a imagem preencha o espaço sem distorcer (cortando se necessário) */
     object-fit: cover; 
     border-radius: 8px;
+   
 }
 
 
@@ -218,6 +219,7 @@ body{
 }
 
 .price{
+    
     font-size: 2rem;
 }
 
@@ -237,88 +239,74 @@ span{
     min-height: 100vh;
 }
 
-#social-media-mobile{
- display: none;
-}
 
-.carousel-wrapper {
-    
-    width: 100%;
-    height: 100%;
-    max-width: 1000px;
-    max-height: 1000px;
-    position: relative;
-    overflow: hidden;
-    padding: 80px;
-}
-
-/* Esconde os inputs de rádio */
-.carousel-wrapper input[type="radio"] {
-    display: none;
-}
-
-/* Área onde os slides são empilhados */
-.slides-area {
-    position: relative;
-    height: 350px; 
-}
-
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; 
-    transition: opacity 0.6s ease-in-out;
+.carrossel{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 15px;
-    /* Cor de fundo definida no HTML para variar */
+    
 }
-
-.content {
-    background-color: rgba(255, 255, 255, 0.7); /* Fundo levemente opaco para o texto */
-    padding: 20px 30px;
-    border-radius: 10px;
+/* O contêiner principal do carrossel */
+.carousel-container {
+    /* REMOVEMOS: display: flex; align-items: center; justify-content: center; */
+    position: relative; /* ESSENCIAL: ponto de referência para os botões absolutos */
+    width: 800px; /* Largura total do carrossel */
+    
+    /* Demais estilos mantidos */
+    border: 5px solid #E6E6FA;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 20px;
 }
 
-.content h2 {
-    color:var(--color-primary-2); /* Roxo escuro */
-    margin-top: 0;
-}
-.content p {
-    color: #333;
-    font-size: 1.1em;
+/* A área visível onde os slides serão movidos */
+.carousel-track-container {
+    height: 400px; /* Altura da imagem */
+    overflow: hidden; /* **Essencial:** Esconde slides fora de vista */
+    position: relative;
 }
 
-/* --- Lógica de Exibição --- */
-#s1:checked ~ .slides-area .slide:nth-child(1),
-#s2:checked ~ .slides-area .slide:nth-child(2),
-#s3:checked ~ .slides-area .slide:nth-child(3),
-#s4:checked ~ .slides-area .slide:nth-child(4),
-#s5:checked ~ .slides-area .slide:nth-child(5) {
-    opacity: 1;
-    z-index: 10;
+/* O trilho que segura todos os slides */
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    /* O carrossel inicia na posição 0 */
+    transition: transform 0.3s ease-in-out; /* Adiciona animação suave */
 }
 
-/* --- Estilo dos Botões de Navegação (Setas) --- */
+/* Cada slide individual */
+.carousel-slide {
+    position: absolute; /* Permite que os slides fiquem lado a lado */
+    top: 0;
+    bottom: 0;
+    width: 100%; /* Largura total do contêiner */
+    background-color: #fff;
+}
+
+/* A imagem dentro do slide */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o slide */
+}
+
+/* Estilização dos botões de navegação */
 .prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--color-primary-1); /* Lilás semi-transparente */
-    color: white;
+    background: rgba(255, 255, 255, 0.7);
     border: none;
-    padding: 15px 10px;
-    cursor: pointer;
-    z-index: 30;
+    padding: 10px;
     font-size: 24px;
-    line-height: 1;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    color: #DA70D6; /* Orquídea/Rosa claro */
+    transition: background 0.2s;
 }
 
 .prev-btn {
@@ -330,44 +318,7 @@ span{
 }
 
 .prev-btn:hover, .next-btn:hover {
-    background-color: var(--color-primary-2); /* Lilás mais sólido no hover */
-}
-
-/* Desabilita botões quando na primeira/última imagem (CSS não pode desabilitar, mas pode esconder) */
-#s1:checked ~ .prev-btn { display: none; } /* Esconde Anterior no Slide 1 */
-#s5:checked ~ .next-btn { display: none; } /* Esconde Próximo no Slide 5 */
-
-
-/* --- Estilo dos Pontos de Navegação (Ajustados) --- */
-.navigation-dots {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-    display: flex;
-    gap: 10px;
-}
-
-.dot {
-    display: block;
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    border: 1px solid #3b3b3b;
-}
-
-/* Ponto ativo */
-#s1:checked ~ .navigation-dots .dot:nth-child(1),
-#s2:checked ~ .navigation-dots .dot:nth-child(2),
-#s3:checked ~ .navigation-dots .dot:nth-child(3),
-#s4:checked ~ .navigation-dots .dot:nth-child(4),
-#s5:checked ~ .navigation-dots .dot:nth-child(5) {
-    background-color: var(--color-primary-1); /* Lilás ativo */
-    transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 #orcamento {

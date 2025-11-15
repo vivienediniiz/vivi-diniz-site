@@ -69,6 +69,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 body {
   background-color: var(--color-neutral-1);
   font-family: var(--fonte-principal);

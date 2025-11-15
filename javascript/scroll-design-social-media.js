@@ -69,40 +69,60 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const wrapper = document.querySelector('.carousel-wrapper');
-    const radios = Array.from(wrapper.querySelectorAll('input[name="carousel"]'));
-    const totalSlides = radios.length;
+// 1. Seleciona os elementos do DOM
+const track = document.querySelector('.carousel-track'); // O trilho (<ul>)
+const slides = Array.from(track.children); // Array de slides (<li>)
+const nextButton = document.querySelector('.next-btn'); // Botão Próximo
+const prevButton = document.querySelector('.prev-btn'); // Botão Anterior
 
-    const prevBtn = wrapper.querySelector('.prev-btn');
-    const nextBtn = wrapper.querySelector('.next-btn');
+// Obtém a largura de um slide (todos têm a mesma largura)
+const slideWidth = slides[0].getBoundingClientRect().width;
 
-    // Função para avançar ou retroceder (sem dar a volta)
-    const navigate = (direction) => {
-        // Encontra o índice do rádio checado
-        const currentIndex = radios.findIndex(radio => radio.checked);
-        let nextIndex = currentIndex; 
-        
-        if (direction === 'next' && currentIndex < totalSlides - 1) {
-            // Avança, desde que não seja o último slide
-            nextIndex = currentIndex + 1;
-        } else if (direction === 'prev' && currentIndex > 0) {
-            // Volta, desde que não seja o primeiro slide
-            nextIndex = currentIndex - 1;
-        } else {
-            // Se tentar ir além dos limites, apenas ignora
-            return; 
-        }
+// 2. Organiza os slides lado a lado
+// Move cada slide para a posição correta (0, 1x largura, 2x largura, etc.)
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+};
+slides.forEach(setSlidePosition);
 
-        // Marca o novo rádio como 'checked'. 
-        // ISSO DISPARA A MUDANÇA VISUAL E O OCULTAMENTO/EXIBIÇÃO DOS BOTÕES VIA CSS.
-        radios[nextIndex].checked = true;
-    };
 
-    // Event Listeners para os Botões
-    prevBtn.addEventListener('click', () => navigate('prev'));
-    nextBtn.addEventListener('click', () => navigate('next'));
-    
-    // Removemos todo o loop "radios.forEach" e o código que forçava "display: block"
-    // pois o CSS deve controlar a visibilidade das setas.
+// 3. Função principal para mover o carrossel
+const moveToSlide = (currentSlide, targetSlide) => {
+    // Calcula quanto o trilho deve ser deslocado
+    const amountToMove = targetSlide.style.left;
+
+    // Move o trilho
+    track.style.transform = 'translateX(-' + amountToMove + ')';
+
+    // Atualiza as classes para indicar o slide ativo
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+};
+
+
+// 4. Lógica do botão PRÓXIMO
+nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let nextSlide = currentSlide.nextElementSibling; // Próximo slide
+
+    // Se for o último slide, volta para o primeiro
+    if (!nextSlide) {
+        nextSlide = slides[0];
+    }
+
+    moveToSlide(currentSlide, nextSlide);
+});
+
+
+// 5. Lógica do botão ANTERIOR
+prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let prevSlide = currentSlide.previousElementSibling; // Slide anterior
+
+    // Se for o primeiro slide, vai para o último
+    if (!prevSlide) {
+        prevSlide = slides[slides.length - 1]; // Último slide
+    }
+
+    moveToSlide(currentSlide, prevSlide);
 });
