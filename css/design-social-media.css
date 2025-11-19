@@ -378,7 +378,7 @@ span{
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 50px;
+    gap: 70px;
 }
 
 .carousel-wrapper {
@@ -440,6 +440,10 @@ span{
 
 #social-media-mobile{
  display: block;
+}
+
+.carrossel{
+    display: none;
 }
 
 
